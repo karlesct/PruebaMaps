@@ -32,6 +32,13 @@
 		2740D89E24F7A314001273A8 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2740D89D24F7A314001273A8 /* FirstViewController.xib */; };
 		2740D8A024F7A464001273A8 /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D89F24F7A464001273A8 /* CoreAssembly.swift */; };
 		2740D8A224F7AB94001273A8 /* PointElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8A124F7AB94001273A8 /* PointElement.swift */; };
+		2740D8A624F7AD96001273A8 /* RemoteAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8A524F7AD96001273A8 /* RemoteAssembly.swift */; };
+		2740D8A924F7AE36001273A8 /* RemoteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8A824F7AE36001273A8 /* RemoteError.swift */; };
+		2740D8AC24F7AF1E001273A8 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8AB24F7AF1E001273A8 /* EndPoint.swift */; };
+		2740D8AE24F7B03B001273A8 /* RemoteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8AD24F7B03B001273A8 /* RemoteHandler.swift */; };
+		2740D8B124F7B163001273A8 /* HTTPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8B024F7B163001273A8 /* HTTPConstants.swift */; };
+		2740D8B424F7B39E001273A8 /* PointRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8B324F7B39E001273A8 /* PointRequest.swift */; };
+		2740D8B724F7B66D001273A8 /* FirstRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8B624F7B66D001273A8 /* FirstRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +126,13 @@
 		2740D89D24F7A314001273A8 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		2740D89F24F7A464001273A8 /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
 		2740D8A124F7AB94001273A8 /* PointElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointElement.swift; sourceTree = "<group>"; };
+		2740D8A524F7AD96001273A8 /* RemoteAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAssembly.swift; sourceTree = "<group>"; };
+		2740D8A824F7AE36001273A8 /* RemoteError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteError.swift; sourceTree = "<group>"; };
+		2740D8AB24F7AF1E001273A8 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		2740D8AD24F7B03B001273A8 /* RemoteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHandler.swift; sourceTree = "<group>"; };
+		2740D8B024F7B163001273A8 /* HTTPConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPConstants.swift; sourceTree = "<group>"; };
+		2740D8B324F7B39E001273A8 /* PointRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointRequest.swift; sourceTree = "<group>"; };
+		2740D8B624F7B66D001273A8 /* FirstRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +277,7 @@
 				2740D89124F79F18001273A8 /* Assembly */,
 				2740D89024F79F0F001273A8 /* Features */,
 				2740D87C24F7999F001273A8 /* Utils */,
+				2740D8A324F7AD70001273A8 /* Remote */,
 				2740D87624F7990B001273A8 /* Resources */,
 				2740D87524F7989B001273A8 /* SupportingFiles */,
 			);
@@ -299,6 +314,7 @@
 		2740D87C24F7999F001273A8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2740D8AF24F7B140001273A8 /* HTTP */,
 				2740D87D24F799A8001273A8 /* Extensions */,
 			);
 			path = Utils;
@@ -386,6 +402,7 @@
 				2740D89524F7A14F001273A8 /* Assembly */,
 				2740D89724F7A17B001273A8 /* Model */,
 				2740D89624F7A159001273A8 /* Presenter */,
+				2740D8B524F7B653001273A8 /* Repository */,
 				2740D89824F7A186001273A8 /* ViewAndViewController */,
 			);
 			path = First;
@@ -422,6 +439,66 @@
 				2740D89D24F7A314001273A8 /* FirstViewController.xib */,
 			);
 			path = ViewAndViewController;
+			sourceTree = "<group>";
+		};
+		2740D8A324F7AD70001273A8 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				2740D8A424F7AD80001273A8 /* Assembly */,
+				2740D8AA24F7AEFE001273A8 /* API */,
+				2740D8B224F7B316001273A8 /* Model */,
+				2740D8A724F7AE20001273A8 /* Error */,
+				2740D8AD24F7B03B001273A8 /* RemoteHandler.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		2740D8A424F7AD80001273A8 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				2740D8A524F7AD96001273A8 /* RemoteAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		2740D8A724F7AE20001273A8 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				2740D8A824F7AE36001273A8 /* RemoteError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		2740D8AA24F7AEFE001273A8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2740D8AB24F7AF1E001273A8 /* EndPoint.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		2740D8AF24F7B140001273A8 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				2740D8B024F7B163001273A8 /* HTTPConstants.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		2740D8B224F7B316001273A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2740D8B324F7B39E001273A8 /* PointRequest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2740D8B524F7B653001273A8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2740D8B624F7B66D001273A8 /* FirstRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -657,13 +734,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				2740D88224F79A05001273A8 /* String+Localized.swift in Sources */,
+				2740D8B124F7B163001273A8 /* HTTPConstants.swift in Sources */,
 				2740D8A224F7AB94001273A8 /* PointElement.swift in Sources */,
+				2740D8A924F7AE36001273A8 /* RemoteError.swift in Sources */,
 				2740D88524F79A35001273A8 /* Bundle+Identifiers.swift in Sources */,
+				2740D8AC24F7AF1E001273A8 /* EndPoint.swift in Sources */,
 				2740D89424F7A078001273A8 /* FirstAssembly.swift in Sources */,
 				2740D89C24F7A2C0001273A8 /* FirstViewController.swift in Sources */,
 				2740D89A24F7A1F5001273A8 /* FirstPresenter.swift in Sources */,
+				2740D8AE24F7B03B001273A8 /* RemoteHandler.swift in Sources */,
 				2740D8A024F7A464001273A8 /* CoreAssembly.swift in Sources */,
+				2740D8A624F7AD96001273A8 /* RemoteAssembly.swift in Sources */,
+				2740D8B424F7B39E001273A8 /* PointRequest.swift in Sources */,
 				2740D88024F799C2001273A8 /* String+Empty.swift in Sources */,
+				2740D8B724F7B66D001273A8 /* FirstRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
