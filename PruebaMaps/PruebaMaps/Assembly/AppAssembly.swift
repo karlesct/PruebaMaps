@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PruebaMapsCore
 
 internal final class AppAssembly {
 
@@ -16,5 +17,6 @@ internal final class AppAssembly {
     private(set) lazy var navigationController: UINavigationController = {
         return CustomNavigationController()
     }()
+    private(set) lazy var coreAssembly = CoreAssembly(navigationController: navigationController)
 
 }

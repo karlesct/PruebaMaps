@@ -32,6 +32,14 @@ extension AppDelegate {
 
         window = appAssembly.window
 
+        let initialViewController = appAssembly.coreAssembly.firstAssembly.viewController()
+
+        appAssembly.navigationController.pushViewController(initialViewController,
+                                                            animated: false)
+
+        appAssembly.window.rootViewController = appAssembly.navigationController
+
+        appAssembly.window.makeKeyAndVisible()
 
     }
 
