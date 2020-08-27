@@ -36,12 +36,19 @@ public final class FirstAssembly {
 
     func presenter() -> FirstPresenterProtocol {
 
-        return FirstPresenter(repository: repository())
+        return FirstPresenter(repository: repository(),
+                              locationService: buildLocationService() )
     }
 
     func repository() -> FirstRepositoryProtocol {
 
         return FirstRepository(remoteHandler: remoteAssembly.remoteHandler)
+
+    }
+
+    func buildLocationService() -> LocationServiceProtocol {
+
+        return LocationServiceAssembly().locationService
 
     }
 

@@ -6,7 +6,9 @@
 //  Copyright © 2020 carlescanadastorrents. All rights reserved.
 //
 
+import UIKit
 import Foundation
+import CoreLocation
 
 internal protocol FirstViewProtocol: class {
     var title: String? { get set }
@@ -26,6 +28,7 @@ internal final class FirstPresenter: FirstPresenterProtocol {
     // MARK: - Properties
 
     private let repository: FirstRepositoryProtocol
+    private var locationService: LocationServiceProtocol
 
     // MARK: - Fields
 
@@ -33,8 +36,10 @@ internal final class FirstPresenter: FirstPresenterProtocol {
 
     // MARK: - Init
 
-    init(repository: FirstRepositoryProtocol) {
+    init(repository: FirstRepositoryProtocol,
+         locationService: LocationServiceProtocol) {
         self.repository = repository
+        self.locationService = locationService
     }
 
     func loadView() {
@@ -42,6 +47,10 @@ internal final class FirstPresenter: FirstPresenterProtocol {
         view?.title = "Maps"
 
         fetchPoints()
+
+        locationService.delegate = self
+
+        locationService.initLocation()
 
     }
 
@@ -67,4 +76,12 @@ internal final class FirstPresenter: FirstPresenterProtocol {
         })
 
     }
+}
+
+extension FirstPresenter: LocationServiceDelegate {
+
+    func userLocation(manager: CLLocationManager) {
+        print(manager)
+    }
+
 }

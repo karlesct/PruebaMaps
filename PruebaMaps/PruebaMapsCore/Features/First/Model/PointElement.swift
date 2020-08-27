@@ -31,7 +31,7 @@ struct PointElement: Codable {
     let bikesAvailable: Int?
 
     enum CodingKeys: String, CodingKey {
-        case id, name,  scheduledArrival, locationType
+        case id, name, scheduledArrival, locationType
         case pointX = "x"
         case pointY = "y"
         case companyZoneID = "companyZoneId"

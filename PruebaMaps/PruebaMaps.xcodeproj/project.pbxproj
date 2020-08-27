@@ -64,6 +64,9 @@
 		2740D8F424F800CB001273A8 /* ViewController+GetTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8F324F800CB001273A8 /* ViewController+GetTopViewController.swift */; };
 		2740D8F724F80119001273A8 /* ViewController+GetTopViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8F624F80119001273A8 /* ViewController+GetTopViewControllerTest.swift */; };
 		2740D8FA24F80150001273A8 /* Window+VisibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8F924F80150001273A8 /* Window+VisibleViewController.swift */; };
+		2740D8FC24F80235001273A8 /* DialogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8FB24F80235001273A8 /* DialogService.swift */; };
+		2740D8FE24F80607001273A8 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8FD24F80607001273A8 /* LocationService.swift */; };
+		2740D90024F80AFF001273A8 /* LocationServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8FF24F80AFF001273A8 /* LocationServiceAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +196,9 @@
 		2740D8F324F800CB001273A8 /* ViewController+GetTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ViewController+GetTopViewController.swift"; path = "PruebaMapsCore/Features/First/Repository/ViewController+GetTopViewController.swift"; sourceTree = SOURCE_ROOT; };
 		2740D8F624F80119001273A8 /* ViewController+GetTopViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ViewController+GetTopViewControllerTest.swift"; path = "PruebaMapsCore/Features/First/Repository/ViewController+GetTopViewControllerTest.swift"; sourceTree = SOURCE_ROOT; };
 		2740D8F924F80150001273A8 /* Window+VisibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Window+VisibleViewController.swift"; sourceTree = "<group>"; };
+		2740D8FB24F80235001273A8 /* DialogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogService.swift; sourceTree = "<group>"; };
+		2740D8FD24F80607001273A8 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		2740D8FF24F80AFF001273A8 /* LocationServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -614,6 +620,8 @@
 		2740D8F024F8004E001273A8 /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				2740D90124F80B25001273A8 /* Assembly */,
+				2740D90224F80B33001273A8 /* Service */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -621,6 +629,7 @@
 		2740D8F124F80069001273A8 /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
+				2740D8FB24F80235001273A8 /* DialogService.swift */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -647,6 +656,22 @@
 				2740D8F924F80150001273A8 /* Window+VisibleViewController.swift */,
 			);
 			path = Window;
+			sourceTree = "<group>";
+		};
+		2740D90124F80B25001273A8 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				2740D8FF24F80AFF001273A8 /* LocationServiceAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		2740D90224F80B33001273A8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2740D8FD24F80607001273A8 /* LocationService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -911,11 +936,14 @@
 				2740D8B124F7B163001273A8 /* HTTPConstants.swift in Sources */,
 				2740D8A224F7AB94001273A8 /* PointElement.swift in Sources */,
 				2740D8A924F7AE36001273A8 /* RemoteError.swift in Sources */,
+				2740D8FE24F80607001273A8 /* LocationService.swift in Sources */,
 				2740D88524F79A35001273A8 /* Bundle+Identifiers.swift in Sources */,
 				2740D8AC24F7AF1E001273A8 /* EndPoint.swift in Sources */,
 				2740D89424F7A078001273A8 /* FirstAssembly.swift in Sources */,
+				2740D90024F80AFF001273A8 /* LocationServiceAssembly.swift in Sources */,
 				2740D89C24F7A2C0001273A8 /* FirstViewController.swift in Sources */,
 				2740D89A24F7A1F5001273A8 /* FirstPresenter.swift in Sources */,
+				2740D8FC24F80235001273A8 /* DialogService.swift in Sources */,
 				2740D8AE24F7B03B001273A8 /* RemoteHandler.swift in Sources */,
 				2740D8A024F7A464001273A8 /* CoreAssembly.swift in Sources */,
 				2740D8A624F7AD96001273A8 /* RemoteAssembly.swift in Sources */,
