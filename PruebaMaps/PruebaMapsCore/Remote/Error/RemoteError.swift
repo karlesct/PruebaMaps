@@ -41,7 +41,7 @@ public enum RemoteError: LocalizedError {
     }
 
     // MARK: - Internal Methods
-    
+
     static func mapServiceError(error: NSError) -> RemoteError {
 
         switch error.code {

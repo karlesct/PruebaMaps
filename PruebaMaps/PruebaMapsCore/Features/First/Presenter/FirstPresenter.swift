@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 internal protocol FirstViewProtocol: class {
     var title: String? { get set }
     func setLoading(_ loading: Bool)

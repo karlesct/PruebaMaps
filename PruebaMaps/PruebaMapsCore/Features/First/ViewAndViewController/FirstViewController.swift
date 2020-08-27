@@ -16,7 +16,6 @@ internal final class FirstViewController: UIViewController {
 
     private let presenter: FirstPresenterProtocol
 
-
     // MARK: - Init
 
     init(presenter: FirstPresenterProtocol) {
@@ -45,11 +44,9 @@ internal final class FirstViewController: UIViewController {
 
     private func setupUI() {
 
-
     }
 
     // MARK: - Actions
-
 
 }
 

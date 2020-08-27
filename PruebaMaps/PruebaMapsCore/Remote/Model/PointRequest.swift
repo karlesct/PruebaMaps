@@ -15,7 +15,7 @@ public struct PointRequest {
 
     public init(zone: String,
                 lowerLeft: Coordinates,
-                upperRight:Coordinates) {
+                upperRight: Coordinates) {
         self.zone = zone
         self.lowerLeft = lowerLeft
         self.upperRight = upperRight

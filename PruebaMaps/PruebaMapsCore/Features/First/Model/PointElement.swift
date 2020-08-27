@@ -14,7 +14,7 @@ typealias Point = [PointElement]
 
 struct PointElement: Codable {
     let id, name: String
-    let x, y: Float
+    let pointX, pointY: Float
     let scheduledArrival, locationType: Int?
     let companyZoneID: Int
     let lat, lon: Float?
@@ -31,11 +31,14 @@ struct PointElement: Codable {
     let bikesAvailable: Int?
 
     enum CodingKeys: String, CodingKey {
-        case id, name, x, y, scheduledArrival, locationType
+        case id, name,  scheduledArrival, locationType
+        case pointX = "x"
+        case pointY = "y"
         case companyZoneID = "companyZoneId"
         case lat, lon, licencePlate, range, batteryLevel, seats, model
         case resourceImageID = "resourceImageId"
-        case realTimeData, resourceType, helmets, station, availableResources, spacesAvailable, allowDropoff, bikesAvailable
+        case realTimeData, resourceType, helmets, station
+        case availableResources, spacesAvailable, allowDropoff, bikesAvailable
     }
 }
 

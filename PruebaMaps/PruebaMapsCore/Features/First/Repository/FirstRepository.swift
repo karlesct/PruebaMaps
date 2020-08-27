@@ -13,26 +13,26 @@ internal protocol FirstRepositoryProtocol {
 }
 
 internal final class FirstRepository {
-    
+
     // MARK: - Properties
-    
+
     private let remoteHandler: RemoteHandler
-    
+
     // MARK: - Init
-    
+
     init(remoteHandler: RemoteHandler) {
         self.remoteHandler = remoteHandler
     }
-    
+
 }
 
 extension FirstRepository: FirstRepositoryProtocol {
-    
+
     func getPoints(pointRequest: PointRequest, completion completed: @escaping (Result<Point, RemoteError>) -> Void) {
-        
+
         remoteHandler.load(Point.self,
                            from: .getPoints(pointRequest: pointRequest)) { result in
-                            
+
                             DispatchQueue.main.async {
                                 switch result {
                                 case .success(let point):
@@ -43,5 +43,5 @@ extension FirstRepository: FirstRepositoryProtocol {
                             }
         }
     }
-    
+
 }
