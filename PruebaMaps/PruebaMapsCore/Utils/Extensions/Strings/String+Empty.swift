@@ -6,8 +6,6 @@
 //  Copyright © 2020 carlescanadastorrents. All rights reserved.
 //
 
-import Foundation
-
 public extension String {
 
     static let empty = ""
