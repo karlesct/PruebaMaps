@@ -20,26 +20,28 @@ public enum RemoteError: LocalizedError {
     case unknown(error: NSError)
 
     // MARK: - Variables
+
     public var errorDescription: String? {
         switch self {
         case .mappingFailed:
-            return "core_serviceError_mappingFailed".localized
+            return "coreRemoteErrorMappingFailed".localized
         case .unexpected, .business:
-            return "core_serviceError_unexpected".localized
+            return "coreRemoteErrorUnexpected".localized
         case .noNetwork:
-            return "core_serviceError_noNetwork".localized
+            return "coreRemoteErrorNoNetwork".localized
         case .internalServer:
-            return "core_serviceError_internalServer".localized
+            return "coreRemoteErrorInternalServer".localized
         case .timedOut:
-            return "core_serviceError_timedOut".localized
+            return "coreRemoteErrorTimedOut".localized
         case .noContent:
-            return "core_serviceError_noContent".localized
+            return "coreRemoteErrorNoContent".localized
         case .unknown(let error):
             return error.localizedDescription
         }
     }
 
     // MARK: - Internal Methods
+    
     static func mapServiceError(error: NSError) -> RemoteError {
 
         switch error.code {
