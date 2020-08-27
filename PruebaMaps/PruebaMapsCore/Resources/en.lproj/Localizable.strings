@@ -6,5 +6,21 @@
   Copyright © 2020 carlescanadastorrents. All rights reserved.
 */
 
+// MARK: - Test
+
 "FirstTest" = "Test";
 "SecondTest" = "The first and second words are only for test purpose";
+
+// MARK: - ServiceErrors
+
+"coreRemoteErrorMappingFailed" = "Could not decode response as desired type";
+
+"coreRemoteErrorUnexpected" = "An error has occurred";
+
+"coreRemoteErrorNoNetwork" = "The device has no connection to internet";
+
+"coreRemoteErrorInternalServer" = "Connection received an invalid server response";
+
+"coreRemoteErrorTimedOut" = "Connection timed out";
+
+"coreRemoteErrorNoContent" = "Connection retrieved no response";
