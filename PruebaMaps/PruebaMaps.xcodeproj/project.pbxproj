@@ -31,6 +31,7 @@
 		2740D89C24F7A2C0001273A8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D89B24F7A2C0001273A8 /* FirstViewController.swift */; };
 		2740D89E24F7A314001273A8 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2740D89D24F7A314001273A8 /* FirstViewController.xib */; };
 		2740D8A024F7A464001273A8 /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D89F24F7A464001273A8 /* CoreAssembly.swift */; };
+		2740D8A224F7AB94001273A8 /* PointElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8A124F7AB94001273A8 /* PointElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		2740D89B24F7A2C0001273A8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		2740D89D24F7A314001273A8 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		2740D89F24F7A464001273A8 /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
+		2740D8A124F7AB94001273A8 /* PointElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointElement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +410,7 @@
 		2740D89724F7A17B001273A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2740D8A124F7AB94001273A8 /* PointElement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2740D88224F79A05001273A8 /* String+Localized.swift in Sources */,
+				2740D8A224F7AB94001273A8 /* PointElement.swift in Sources */,
 				2740D88524F79A35001273A8 /* Bundle+Identifiers.swift in Sources */,
 				2740D89424F7A078001273A8 /* FirstAssembly.swift in Sources */,
 				2740D89C24F7A2C0001273A8 /* FirstViewController.swift in Sources */,
