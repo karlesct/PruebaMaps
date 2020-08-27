@@ -9,20 +9,8 @@
 
 import Foundation
 
-/// Types adopting the `URLRequestConvertible` protocol can be used to safely construct `URLRequest`s.
-public protocol URLRequestConvertible {
-    /// Returns a `URLRequest` or return `nil`  if error was encountered.
-    ///
-    /// - Returns: A `URLRequest`.
-    /// - Throws:  Any error thrown while constructing the `URLRequest`.
-    func asURLRequest() -> URLRequest?
-}
-
-internal enum Endpoint: URLRequestConvertible {
+internal enum Endpoint {
     case getPoints(pointRequest: PointRequest)
-
-    static let baseURL = "https://apidev.meep.me"
-    static let baseURLPath = "/tripplan/api/v1/"
 
     var method: HTTPMethods {
         switch self {
@@ -34,22 +22,31 @@ internal enum Endpoint: URLRequestConvertible {
     var path: String {
         switch self {
         case .getPoints(let pointRequest):
-            return "/routers/\(pointRequest.zone)/resources?lowerLeftLatLon=\(pointRequest.lowerLeft.latitud),\(pointRequest.lowerLeft.longitud)&upperRightLatLon=\(pointRequest.upperRight.latitud),\(pointRequest.upperRight.longitud)"
+            return "/routers/\(pointRequest.zone)/resources"
         }
     }
 
-    func asURLRequest() -> URLRequest? {
+    var parameters: [String: String] {
+        switch self {
+        case .getPoints(let pointRequest):
+            return ["lowerLeftLatLon": "\(pointRequest.lowerLeft.latitud),\(pointRequest.lowerLeft.longitud)",
+                    "upperRightLatLon": "\(pointRequest.upperRight.latitud),\(pointRequest.upperRight.longitud)"]
+        }
+    }
 
-        let baseUrl = Endpoint.baseURL
-        let path = Endpoint.baseURLPath + self.path
+    func request(with baseURL: URL, adding parameters: [String: String]) -> URLRequest {
+        let url = baseURL.appendingPathComponent(path)
 
-        guard let url = URL.init(string: baseUrl) else { return nil }
+        var newParameters = self.parameters
+        parameters.forEach { newParameters.updateValue($1, forKey: $0) }
 
-        var urlRequest = URLRequest(url: url.appendingPathComponent(path))
+        var components = URLComponents(url: url, resolvingAgainstBaseURL: false)!
+        components.queryItems = newParameters.map(URLQueryItem.init)
 
-        urlRequest.httpMethod = self.method.rawValue
+        var request = URLRequest(url: components.url!)
+        request.httpMethod = method.rawValue
 
-       return urlRequest
+        return request
     }
 
 }

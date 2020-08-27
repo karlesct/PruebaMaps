@@ -13,6 +13,7 @@ internal final class RemoteHandler {
     // MARK: - Properties
     private let session: URLSession
     private let decoder = JSONDecoder()
+    private let baseURL = "https://apidev.meep.me/tripplan/api/v1"
 
     // MARK: - Variables
     private var dataTask: URLSessionDataTask?
@@ -29,10 +30,12 @@ internal final class RemoteHandler {
 
         let decoder = self.decoder
 
-        guard let urlRequest = endpoint.asURLRequest() else {
-            completed(.failure(.internalServer))
+        guard let url = URL(string: baseURL) else {
+            completed(.failure(.unexpected))
             return
         }
+
+        let urlRequest = endpoint.request(with: url, adding: [:])
 
         dataTask = session.dataTask(with: urlRequest,
                                     completionHandler: { data, response, error in
