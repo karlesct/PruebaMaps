@@ -103,9 +103,8 @@
 				2740D81B24F78C3D001273A8 /* SceneDelegate.swift */,
 				2740D81D24F78C3D001273A8 /* ViewController.swift */,
 				2740D81F24F78C3D001273A8 /* Main.storyboard */,
-				2740D82224F78C40001273A8 /* Assets.xcassets */,
-				2740D82424F78C40001273A8 /* LaunchScreen.storyboard */,
-				2740D82724F78C40001273A8 /* Info.plist */,
+				2740D84A24F79078001273A8 /* Resources */,
+				2740D84924F78FD3001273A8 /* SupportingFiles */,
 			);
 			path = PruebaMaps;
 			sourceTree = "<group>";
@@ -126,6 +125,23 @@
 				2740D83D24F78C40001273A8 /* Info.plist */,
 			);
 			path = PruebaMapsUITests;
+			sourceTree = "<group>";
+		};
+		2740D84924F78FD3001273A8 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2740D82724F78C40001273A8 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		2740D84A24F79078001273A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2740D82224F78C40001273A8 /* Assets.xcassets */,
+				2740D82424F78C40001273A8 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,7 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PruebaMaps/Info.plist;
+				INFOPLIST_FILE = PruebaMaps/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -443,7 +459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = es.carlescanadastorrents.PruebaMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -452,7 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PruebaMaps/Info.plist;
+				INFOPLIST_FILE = PruebaMaps/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,7 +476,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = es.carlescanadastorrents.PruebaMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
