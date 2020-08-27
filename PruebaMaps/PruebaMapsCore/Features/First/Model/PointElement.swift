@@ -20,10 +20,10 @@ struct PointElement: Codable {
     let lat, lon: Float?
     let licencePlate: String?
     let range, batteryLevel, seats: Int?
-    let model: Model?
-    let resourceImageID: ResourceImageID?
+    let model: String?
+    let resourceImageID: String?
     let realTimeData: Bool?
-    let resourceType: ResourceType?
+    let resourceType: String?
     let helmets: Int?
     let station: Bool?
     let availableResources, spacesAvailable: Int?
@@ -40,19 +40,4 @@ struct PointElement: Codable {
         case realTimeData, resourceType, helmets, station
         case availableResources, spacesAvailable, allowDropoff, bikesAvailable
     }
-}
-
-enum Model: String, Codable {
-    case askoll = "Askoll"
-    case nullDS3 = "null DS3"
-}
-
-enum ResourceImageID: String, Codable {
-    case vehicleGenEcooltra = "vehicle_gen_ecooltra"
-    case vehicleGenEmov = "vehicle_gen_emov"
-}
-
-enum ResourceType: String, Codable {
-    case electricCar = "ELECTRIC_CAR"
-    case moped = "MOPED"
 }

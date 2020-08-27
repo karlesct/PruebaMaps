@@ -108,7 +108,7 @@ extension LocationService: CLLocationManagerDelegate {
         delegate?.userLocation(manager: manager)
 
     }
-    
+
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 
         guard locations.first != nil else {
