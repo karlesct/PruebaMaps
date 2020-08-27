@@ -36,7 +36,7 @@ public final class FirstAssembly {
 
     func presenter() -> FirstPresenterProtocol {
 
-        return FirstPresenter(reporitory: repository())
+        return FirstPresenter(repository: repository())
     }
 
     func repository() -> FirstRepositoryProtocol {

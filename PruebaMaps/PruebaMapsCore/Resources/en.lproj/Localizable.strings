@@ -14,13 +14,8 @@
 // MARK: - ServiceErrors
 
 "coreRemoteErrorMappingFailed" = "Could not decode response as desired type";
-
 "coreRemoteErrorUnexpected" = "An error has occurred";
-
 "coreRemoteErrorNoNetwork" = "The device has no connection to internet";
-
 "coreRemoteErrorInternalServer" = "Connection received an invalid server response";
-
 "coreRemoteErrorTimedOut" = "Connection timed out";
-
 "coreRemoteErrorNoContent" = "Connection retrieved no response";

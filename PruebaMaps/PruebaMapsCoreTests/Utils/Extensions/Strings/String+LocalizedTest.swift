@@ -31,4 +31,9 @@ class String_LocalizedTest: XCTestCase {
         XCTAssertEqual("SecondTest".localized, "The first and second words are only for test purpose")
     }
 
+    func testLocalized_05() {
+
+        XCTAssertEqual("coreRemoteErrorInternalServer".localized, "Connection received an invalid server response")
+    }
+
 }

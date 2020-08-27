@@ -23,11 +23,11 @@ public struct PointRequest {
 }
 
 public struct Coordinates {
-    let latitud: Double
-    let longitud: Double
+    let latitud: Float
+    let longitud: Float
 
-    public init(latitud: Double,
-                longitud: Double) {
+    public init(latitud: Float,
+                longitud: Float) {
         self.latitud = latitud
         self.longitud = longitud
     }
