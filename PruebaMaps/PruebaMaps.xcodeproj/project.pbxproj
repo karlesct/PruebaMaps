@@ -14,6 +14,11 @@
 		2740D83C24F78C40001273A8 /* PruebaMapsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D83B24F78C40001273A8 /* PruebaMapsUITests.swift */; };
 		2740D84E24F79345001273A8 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D84D24F79345001273A8 /* CustomNavigationController.swift */; };
 		2740D85124F793BC001273A8 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D85024F793BC001273A8 /* AppAssembly.swift */; };
+		2740D86024F79835001273A8 /* PruebaMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2740D85724F79835001273A8 /* PruebaMapsCore.framework */; };
+		2740D86724F79835001273A8 /* PruebaMapsCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D86624F79835001273A8 /* PruebaMapsCoreTests.swift */; };
+		2740D86924F79836001273A8 /* PruebaMapsCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2740D85924F79835001273A8 /* PruebaMapsCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2740D86C24F79836001273A8 /* PruebaMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2740D85724F79835001273A8 /* PruebaMapsCore.framework */; };
+		2740D86D24F79836001273A8 /* PruebaMapsCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2740D85724F79835001273A8 /* PruebaMapsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +36,42 @@
 			remoteGlobalIDString = 2740D81524F78C3D001273A8;
 			remoteInfo = PruebaMaps;
 		};
+		2740D86124F79835001273A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2740D80E24F78C3D001273A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2740D85624F79835001273A8;
+			remoteInfo = PruebaMapsCore;
+		};
+		2740D86324F79835001273A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2740D80E24F78C3D001273A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2740D81524F78C3D001273A8;
+			remoteInfo = PruebaMaps;
+		};
+		2740D86A24F79836001273A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2740D80E24F78C3D001273A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2740D85624F79835001273A8;
+			remoteInfo = PruebaMapsCore;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2740D86E24F79836001273A8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2740D86D24F79836001273A8 /* PruebaMapsCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2740D81624F78C3D001273A8 /* PruebaMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +87,12 @@
 		2740D83D24F78C40001273A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2740D84D24F79345001273A8 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		2740D85024F793BC001273A8 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		2740D85724F79835001273A8 /* PruebaMapsCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PruebaMapsCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2740D85924F79835001273A8 /* PruebaMapsCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PruebaMapsCore.h; sourceTree = "<group>"; };
+		2740D85A24F79835001273A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2740D85F24F79835001273A8 /* PruebaMapsCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PruebaMapsCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2740D86624F79835001273A8 /* PruebaMapsCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaMapsCoreTests.swift; sourceTree = "<group>"; };
+		2740D86824F79836001273A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2740D86C24F79836001273A8 /* PruebaMapsCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +118,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2740D85424F79835001273A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2740D85C24F79835001273A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2740D86024F79835001273A8 /* PruebaMapsCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +142,8 @@
 				2740D81824F78C3D001273A8 /* PruebaMaps */,
 				2740D82F24F78C40001273A8 /* PruebaMapsTests */,
 				2740D83A24F78C40001273A8 /* PruebaMapsUITests */,
+				2740D85824F79835001273A8 /* PruebaMapsCore */,
+				2740D86524F79835001273A8 /* PruebaMapsCoreTests */,
 				2740D81724F78C3D001273A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +154,8 @@
 				2740D81624F78C3D001273A8 /* PruebaMaps.app */,
 				2740D82C24F78C40001273A8 /* PruebaMapsTests.xctest */,
 				2740D83724F78C40001273A8 /* PruebaMapsUITests.xctest */,
+				2740D85724F79835001273A8 /* PruebaMapsCore.framework */,
+				2740D85F24F79835001273A8 /* PruebaMapsCoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,7 +231,36 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		2740D85824F79835001273A8 /* PruebaMapsCore */ = {
+			isa = PBXGroup;
+			children = (
+				2740D85924F79835001273A8 /* PruebaMapsCore.h */,
+				2740D85A24F79835001273A8 /* Info.plist */,
+			);
+			path = PruebaMapsCore;
+			sourceTree = "<group>";
+		};
+		2740D86524F79835001273A8 /* PruebaMapsCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				2740D86624F79835001273A8 /* PruebaMapsCoreTests.swift */,
+				2740D86824F79836001273A8 /* Info.plist */,
+			);
+			path = PruebaMapsCoreTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2740D85224F79835001273A8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2740D86924F79836001273A8 /* PruebaMapsCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		2740D81524F78C3D001273A8 /* PruebaMaps */ = {
@@ -175,10 +270,12 @@
 				2740D81224F78C3D001273A8 /* Sources */,
 				2740D81324F78C3D001273A8 /* Frameworks */,
 				2740D81424F78C3D001273A8 /* Resources */,
+				2740D86E24F79836001273A8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2740D86B24F79836001273A8 /* PBXTargetDependency */,
 			);
 			name = PruebaMaps;
 			productName = PruebaMaps;
@@ -221,6 +318,43 @@
 			productReference = 2740D83724F78C40001273A8 /* PruebaMapsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		2740D85624F79835001273A8 /* PruebaMapsCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2740D87324F79836001273A8 /* Build configuration list for PBXNativeTarget "PruebaMapsCore" */;
+			buildPhases = (
+				2740D85224F79835001273A8 /* Headers */,
+				2740D85324F79835001273A8 /* Sources */,
+				2740D85424F79835001273A8 /* Frameworks */,
+				2740D85524F79835001273A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PruebaMapsCore;
+			productName = PruebaMapsCore;
+			productReference = 2740D85724F79835001273A8 /* PruebaMapsCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2740D85E24F79835001273A8 /* PruebaMapsCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2740D87424F79836001273A8 /* Build configuration list for PBXNativeTarget "PruebaMapsCoreTests" */;
+			buildPhases = (
+				2740D85B24F79835001273A8 /* Sources */,
+				2740D85C24F79835001273A8 /* Frameworks */,
+				2740D85D24F79835001273A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2740D86224F79835001273A8 /* PBXTargetDependency */,
+				2740D86424F79835001273A8 /* PBXTargetDependency */,
+			);
+			name = PruebaMapsCoreTests;
+			productName = PruebaMapsCoreTests;
+			productReference = 2740D85F24F79835001273A8 /* PruebaMapsCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -242,6 +376,13 @@
 						CreatedOnToolsVersion = 11.6;
 						TestTargetID = 2740D81524F78C3D001273A8;
 					};
+					2740D85624F79835001273A8 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					2740D85E24F79835001273A8 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 2740D81524F78C3D001273A8;
+					};
 				};
 			};
 			buildConfigurationList = 2740D81124F78C3D001273A8 /* Build configuration list for PBXProject "PruebaMaps" */;
@@ -260,6 +401,8 @@
 				2740D81524F78C3D001273A8 /* PruebaMaps */,
 				2740D82B24F78C40001273A8 /* PruebaMapsTests */,
 				2740D83624F78C40001273A8 /* PruebaMapsUITests */,
+				2740D85624F79835001273A8 /* PruebaMapsCore */,
+				2740D85E24F79835001273A8 /* PruebaMapsCoreTests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,6 +425,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2740D83524F78C40001273A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2740D85524F79835001273A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2740D85D24F79835001273A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -317,6 +474,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2740D85324F79835001273A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2740D85B24F79835001273A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2740D86724F79835001273A8 /* PruebaMapsCoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -329,6 +501,21 @@
 			isa = PBXTargetDependency;
 			target = 2740D81524F78C3D001273A8 /* PruebaMaps */;
 			targetProxy = 2740D83824F78C40001273A8 /* PBXContainerItemProxy */;
+		};
+		2740D86224F79835001273A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2740D85624F79835001273A8 /* PruebaMapsCore */;
+			targetProxy = 2740D86124F79835001273A8 /* PBXContainerItemProxy */;
+		};
+		2740D86424F79835001273A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2740D81524F78C3D001273A8 /* PruebaMaps */;
+			targetProxy = 2740D86324F79835001273A8 /* PBXContainerItemProxy */;
+		};
+		2740D86B24F79836001273A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2740D85624F79835001273A8 /* PruebaMapsCore */;
+			targetProxy = 2740D86A24F79836001273A8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -572,6 +759,98 @@
 			};
 			name = Release;
 		};
+		2740D86F24F79836001273A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PruebaMapsCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.carlescanadastorrents.PruebaMapsCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2740D87024F79836001273A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PruebaMapsCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.carlescanadastorrents.PruebaMapsCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2740D87124F79836001273A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PruebaMapsCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.carlescanadastorrents.PruebaMapsCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PruebaMaps.app/PruebaMaps";
+			};
+			name = Debug;
+		};
+		2740D87224F79836001273A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PruebaMapsCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.carlescanadastorrents.PruebaMapsCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PruebaMaps.app/PruebaMaps";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -607,6 +886,24 @@
 			buildConfigurations = (
 				2740D84724F78C40001273A8 /* Debug */,
 				2740D84824F78C40001273A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2740D87324F79836001273A8 /* Build configuration list for PBXNativeTarget "PruebaMapsCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2740D86F24F79836001273A8 /* Debug */,
+				2740D87024F79836001273A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2740D87424F79836001273A8 /* Build configuration list for PBXNativeTarget "PruebaMapsCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2740D87124F79836001273A8 /* Debug */,
+				2740D87224F79836001273A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
