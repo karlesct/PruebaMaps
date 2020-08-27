@@ -13,11 +13,15 @@ public final class FirstAssembly {
     // MARK: - Properties
 
     private let navigationController: UINavigationController
+    private let remoteAssembly: RemoteAssembly
 
     // MARK: - Init
 
-    public init(navigationController: UINavigationController) {
+    public init(navigationController: UINavigationController,
+                remoteAssembly: RemoteAssembly) {
         self.navigationController = navigationController
+        self.remoteAssembly = remoteAssembly
+
     }
 
     // MARK: - Public Methods
@@ -32,8 +36,13 @@ public final class FirstAssembly {
 
     func presenter() -> FirstPresenterProtocol {
 
-        return FirstPresenter()
+        return FirstPresenter(reporitory: repository())
     }
 
+    func repository() -> FirstRepositoryProtocol {
+
+        return FirstRepository(remoteHandler: remoteAssembly.remoteHandler)
+
+    }
 
 }

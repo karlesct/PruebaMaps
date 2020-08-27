@@ -19,6 +19,7 @@ internal protocol FirstPresenterProtocol: class {
 
     var view: FirstViewProtocol? { get set }
     func loadView()
+    func fetchPoints()
 
 }
 
@@ -26,14 +27,16 @@ internal final class FirstPresenter: FirstPresenterProtocol {
 
     // MARK: - Properties
 
+    private let repository: FirstRepositoryProtocol
+
     // MARK: - Fields
 
     weak var view: FirstViewProtocol?
 
     // MARK: - Init
 
-    init() {
-
+    init(repository: FirstRepositoryProtocol) {
+        self.repository = repository
     }
 
     func loadView() {
@@ -42,4 +45,7 @@ internal final class FirstPresenter: FirstPresenterProtocol {
 
     }
 
+    func fetchPoints() {
+        
+    }
 }

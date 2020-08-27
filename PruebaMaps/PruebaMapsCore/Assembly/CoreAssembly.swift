@@ -15,7 +15,10 @@ public final class CoreAssembly {
 
     // MARK: - Properties
 
-    public private(set) lazy var firstAssembly = FirstAssembly(navigationController: navigationController)
+    private(set) lazy var remoteAssembly = RemoteAssembly()
+
+    public private(set) lazy var firstAssembly = FirstAssembly(navigationController: navigationController,
+                                                               remoteAssembly: remoteAssembly)
 
     // MARK: - Init
     public init(navigationController: UINavigationController) {

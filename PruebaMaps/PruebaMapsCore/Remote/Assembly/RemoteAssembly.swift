@@ -11,6 +11,7 @@ import Foundation
 public final class RemoteAssembly {
 
     // MARK: - Properties
+
     private(set) lazy var remoteHandler = RemoteHandler(session: URLSession(configuration: .default))
 
     // MARK: - Init
