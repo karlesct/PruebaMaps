@@ -26,6 +26,10 @@
 		2740D88A24F79AB8001273A8 /* Bundle+IdentifiersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D88924F79AB8001273A8 /* Bundle+IdentifiersTest.swift */; };
 		2740D88D24F79B05001273A8 /* String+EmptyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D88C24F79B05001273A8 /* String+EmptyTest.swift */; };
 		2740D88F24F79C02001273A8 /* String+LocalizedTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D88E24F79C02001273A8 /* String+LocalizedTest.swift */; };
+		2740D89424F7A078001273A8 /* FirstAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D89324F7A078001273A8 /* FirstAssembly.swift */; };
+		2740D89A24F7A1F5001273A8 /* FirstPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D89924F7A1F5001273A8 /* FirstPresenter.swift */; };
+		2740D89C24F7A2C0001273A8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D89B24F7A2C0001273A8 /* FirstViewController.swift */; };
+		2740D89E24F7A314001273A8 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2740D89D24F7A314001273A8 /* FirstViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +111,10 @@
 		2740D88924F79AB8001273A8 /* Bundle+IdentifiersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+IdentifiersTest.swift"; sourceTree = "<group>"; };
 		2740D88C24F79B05001273A8 /* String+EmptyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+EmptyTest.swift"; sourceTree = "<group>"; };
 		2740D88E24F79C02001273A8 /* String+LocalizedTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+LocalizedTest.swift"; sourceTree = "<group>"; };
+		2740D89324F7A078001273A8 /* FirstAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAssembly.swift; sourceTree = "<group>"; };
+		2740D89924F7A1F5001273A8 /* FirstPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPresenter.swift; sourceTree = "<group>"; };
+		2740D89B24F7A2C0001273A8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		2740D89D24F7A314001273A8 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,8 +378,44 @@
 		2740D89224F79F37001273A8 /* First */ = {
 			isa = PBXGroup;
 			children = (
+				2740D89524F7A14F001273A8 /* Assembly */,
+				2740D89724F7A17B001273A8 /* Model */,
+				2740D89624F7A159001273A8 /* Presenter */,
+				2740D89824F7A186001273A8 /* ViewAndViewController */,
 			);
 			path = First;
+			sourceTree = "<group>";
+		};
+		2740D89524F7A14F001273A8 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				2740D89324F7A078001273A8 /* FirstAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		2740D89624F7A159001273A8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2740D89924F7A1F5001273A8 /* FirstPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2740D89724F7A17B001273A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2740D89824F7A186001273A8 /* ViewAndViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2740D89B24F7A2C0001273A8 /* FirstViewController.swift */,
+				2740D89D24F7A314001273A8 /* FirstViewController.xib */,
+			);
+			path = ViewAndViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,6 +606,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2740D87924F7992B001273A8 /* Localizable.strings in Resources */,
+				2740D89E24F7A314001273A8 /* FirstViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +652,9 @@
 			files = (
 				2740D88224F79A05001273A8 /* String+Localized.swift in Sources */,
 				2740D88524F79A35001273A8 /* Bundle+Identifiers.swift in Sources */,
+				2740D89424F7A078001273A8 /* FirstAssembly.swift in Sources */,
+				2740D89C24F7A2C0001273A8 /* FirstViewController.swift in Sources */,
+				2740D89A24F7A1F5001273A8 /* FirstPresenter.swift in Sources */,
 				2740D88024F799C2001273A8 /* String+Empty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
