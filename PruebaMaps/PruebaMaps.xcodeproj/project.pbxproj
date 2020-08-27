@@ -199,6 +199,7 @@
 		2740D8FB24F80235001273A8 /* DialogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogService.swift; sourceTree = "<group>"; };
 		2740D8FD24F80607001273A8 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		2740D8FF24F80AFF001273A8 /* LocationServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceAssembly.swift; sourceTree = "<group>"; };
+		2740D90324F81E60001273A8 /* madrid.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = madrid.gpx; path = ../madrid.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +264,7 @@
 		2740D80D24F78C3D001273A8 = {
 			isa = PBXGroup;
 			children = (
+				2740D90324F81E60001273A8 /* madrid.gpx */,
 				2740D81824F78C3D001273A8 /* PruebaMaps */,
 				2740D82F24F78C40001273A8 /* PruebaMapsTests */,
 				2740D83A24F78C40001273A8 /* PruebaMapsUITests */,
