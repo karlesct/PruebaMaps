@@ -19,6 +19,7 @@
 		2740D86924F79836001273A8 /* PruebaMapsCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2740D85924F79835001273A8 /* PruebaMapsCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2740D86C24F79836001273A8 /* PruebaMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2740D85724F79835001273A8 /* PruebaMapsCore.framework */; };
 		2740D86D24F79836001273A8 /* PruebaMapsCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2740D85724F79835001273A8 /* PruebaMapsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2740D87924F7992B001273A8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2740D87B24F7992B001273A8 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		2740D85F24F79835001273A8 /* PruebaMapsCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PruebaMapsCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2740D86624F79835001273A8 /* PruebaMapsCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaMapsCoreTests.swift; sourceTree = "<group>"; };
 		2740D86824F79836001273A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2740D87A24F7992B001273A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 		2740D85824F79835001273A8 /* PruebaMapsCore */ = {
 			isa = PBXGroup;
 			children = (
+				2740D87624F7990B001273A8 /* Resources */,
 				2740D87524F7989B001273A8 /* SupportingFiles */,
 			);
 			path = PruebaMapsCore;
@@ -255,6 +258,14 @@
 				2740D85A24F79835001273A8 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		2740D87624F7990B001273A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2740D87B24F7992B001273A8 /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +454,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2740D87924F7992B001273A8 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +546,14 @@
 				2740D82524F78C40001273A8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2740D87B24F7992B001273A8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2740D87A24F7992B001273A8 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
