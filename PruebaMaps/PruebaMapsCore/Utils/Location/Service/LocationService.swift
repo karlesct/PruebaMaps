@@ -19,14 +19,17 @@ public protocol LocationServiceProtocol {
 
     var delegate: LocationServiceDelegate? { get set }
 
-    func initLocation()
 }
 
 public class LocationService: NSObject, LocationServiceProtocol {
 
     // MARK: - Fields
 
-    public weak var delegate: LocationServiceDelegate?
+    public weak var delegate: LocationServiceDelegate? {
+        didSet {
+            initLocation()
+        }
+    }
 
     private let dialogService: DialogServiceProtocol?
     private let locationManager = CLLocationManager()
@@ -39,9 +42,9 @@ public class LocationService: NSObject, LocationServiceProtocol {
 
     }
 
-    // MARK: - Accessible Methods
+    private func initLocation() {
 
-    public func initLocation() {
+        locationManager.delegate = self
 
         // If location services is enabled get the users location
         if CLLocationManager.locationServicesEnabled() {
@@ -78,7 +81,6 @@ public class LocationService: NSObject, LocationServiceProtocol {
     private func startTrackingUserLocation() {
 
         //it starts the didUpdateLocations function in delegate
-        locationManager.delegate = self
         locationManager.startUpdatingLocation()
     }
 
@@ -100,6 +102,16 @@ extension LocationService: CLLocationManagerDelegate {
     public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
 
         guard status == .authorizedWhenInUse else {
+            return
+        }
+
+        delegate?.userLocation(manager: manager)
+
+    }
+    
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+        guard locations.first != nil else {
             return
         }
 

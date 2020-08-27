@@ -13,12 +13,14 @@ import CoreLocation
 internal protocol FirstViewProtocol: class {
     var title: String? { get set }
     func setLoading(_ loading: Bool)
+    func setUserLocation(location: CLLocationCoordinate2D?)
 }
 
 internal protocol FirstPresenterProtocol: class {
 
     var view: FirstViewProtocol? { get set }
     func loadView()
+    func didAppearView()
     func fetchPoints()
 
 }
@@ -48,9 +50,11 @@ internal final class FirstPresenter: FirstPresenterProtocol {
 
         fetchPoints()
 
-        locationService.delegate = self
+    }
 
-        locationService.initLocation()
+    func didAppearView() {
+
+        locationService.delegate = self
 
     }
 
@@ -81,7 +85,7 @@ internal final class FirstPresenter: FirstPresenterProtocol {
 extension FirstPresenter: LocationServiceDelegate {
 
     func userLocation(manager: CLLocationManager) {
-        print(manager)
+        view?.setUserLocation(location: manager.location?.coordinate)
     }
 
 }

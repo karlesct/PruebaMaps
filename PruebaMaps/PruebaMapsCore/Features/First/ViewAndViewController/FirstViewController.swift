@@ -43,6 +43,12 @@ internal final class FirstViewController: UIViewController {
         presenter.loadView()
     }
 
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        presenter.didAppearView()
+    }
+
     // MARK: - Private methods
 
     private func setupUI() {
@@ -54,6 +60,18 @@ internal final class FirstViewController: UIViewController {
 }
 
 extension FirstViewController: FirstViewProtocol {
+    func setUserLocation(location: CLLocationCoordinate2D?) {
+
+        guard let location = location else { return }
+
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
+
+        mapView.camera = GMSCameraPosition(target: location,
+                                           zoom: 15,
+                                           bearing: .zero,
+                                           viewingAngle: .zero)
+    }
 
     func setLoading(_ loading: Bool) {
 
