@@ -248,6 +248,8 @@
 		2740D85824F79835001273A8 /* PruebaMapsCore */ = {
 			isa = PBXGroup;
 			children = (
+				2740D89124F79F18001273A8 /* Assembly */,
+				2740D89024F79F0F001273A8 /* Features */,
 				2740D87C24F7999F001273A8 /* Utils */,
 				2740D87624F7990B001273A8 /* Resources */,
 				2740D87524F7989B001273A8 /* SupportingFiles */,
@@ -348,6 +350,28 @@
 				2740D88E24F79C02001273A8 /* String+LocalizedTest.swift */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		2740D89024F79F0F001273A8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				2740D89224F79F37001273A8 /* First */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		2740D89124F79F18001273A8 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		2740D89224F79F37001273A8 /* First */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = First;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
