@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +32,8 @@ extension AppDelegate {
 
     func appSetup() {
 
+        setupGoogleMaps()
+
         window = appAssembly.window
 
         let initialViewController = appAssembly.coreAssembly.firstAssembly.viewController()
@@ -44,4 +47,7 @@ extension AppDelegate {
 
     }
 
+    func setupGoogleMaps() {
+        GMSServices.provideAPIKey("AIzaSyAdE8r0bQcPQfye1dC_LKX16OWIuqPvYmU")
+    }
 }

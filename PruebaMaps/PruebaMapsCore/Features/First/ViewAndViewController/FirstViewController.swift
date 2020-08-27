@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import GoogleMaps
 
 internal final class FirstViewController: UIViewController {
 
     // MARK: - IBoutlets
+
+    @IBOutlet weak var mapView: GMSMapView!
 
     // MARK: - Properties
 

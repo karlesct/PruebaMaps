@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController" customModule="PruebaMapsCore" customModuleProvider="target">
             <connections>
+                <outlet property="mapView" destination="gST-qR-sn4" id="Jc0-Gu-J3b"/>
                 <outlet property="view" destination="iN0-l3-epB" id="MYy-g7-eUH"/>
             </connections>
         </placeholder>
@@ -16,7 +17,19 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gST-qR-sn4" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="gST-qR-sn4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Eep-XM-uOQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gST-qR-sn4" secondAttribute="trailing" id="SIO-oO-Jg8"/>
+                <constraint firstItem="gST-qR-sn4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="YtA-EJ-1gv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gST-qR-sn4" secondAttribute="bottom" id="sd4-P0-ged"/>
+            </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="113"/>
