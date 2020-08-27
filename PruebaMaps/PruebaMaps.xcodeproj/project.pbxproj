@@ -25,6 +25,7 @@
 		2740D88524F79A35001273A8 /* Bundle+Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D88424F79A35001273A8 /* Bundle+Identifiers.swift */; };
 		2740D88A24F79AB8001273A8 /* Bundle+IdentifiersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D88924F79AB8001273A8 /* Bundle+IdentifiersTest.swift */; };
 		2740D88D24F79B05001273A8 /* String+EmptyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D88C24F79B05001273A8 /* String+EmptyTest.swift */; };
+		2740D88F24F79C02001273A8 /* String+LocalizedTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D88E24F79C02001273A8 /* String+LocalizedTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		2740D88424F79A35001273A8 /* Bundle+Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Identifiers.swift"; sourceTree = "<group>"; };
 		2740D88924F79AB8001273A8 /* Bundle+IdentifiersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+IdentifiersTest.swift"; sourceTree = "<group>"; };
 		2740D88C24F79B05001273A8 /* String+EmptyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+EmptyTest.swift"; sourceTree = "<group>"; };
+		2740D88E24F79C02001273A8 /* String+LocalizedTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+LocalizedTest.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				2740D88C24F79B05001273A8 /* String+EmptyTest.swift */,
+				2740D88E24F79C02001273A8 /* String+LocalizedTest.swift */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 			files = (
 				2740D88A24F79AB8001273A8 /* Bundle+IdentifiersTest.swift in Sources */,
 				2740D86724F79835001273A8 /* PruebaMapsCoreTests.swift in Sources */,
+				2740D88F24F79C02001273A8 /* String+LocalizedTest.swift in Sources */,
 				2740D88D24F79B05001273A8 /* String+EmptyTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
