@@ -20,6 +20,7 @@
 		2740D86C24F79836001273A8 /* PruebaMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2740D85724F79835001273A8 /* PruebaMapsCore.framework */; };
 		2740D86D24F79836001273A8 /* PruebaMapsCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2740D85724F79835001273A8 /* PruebaMapsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2740D87924F7992B001273A8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2740D87B24F7992B001273A8 /* Localizable.strings */; };
+		2740D88024F799C2001273A8 /* String+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D87F24F799C2001273A8 /* String+Empty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		2740D86624F79835001273A8 /* PruebaMapsCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaMapsCoreTests.swift; sourceTree = "<group>"; };
 		2740D86824F79836001273A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2740D87A24F7992B001273A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2740D87F24F799C2001273A8 /* String+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Empty.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 		2740D85824F79835001273A8 /* PruebaMapsCore */ = {
 			isa = PBXGroup;
 			children = (
+				2740D87C24F7999F001273A8 /* Utils */,
 				2740D87624F7990B001273A8 /* Resources */,
 				2740D87524F7989B001273A8 /* SupportingFiles */,
 			);
@@ -266,6 +269,30 @@
 				2740D87B24F7992B001273A8 /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		2740D87C24F7999F001273A8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2740D87D24F799A8001273A8 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2740D87D24F799A8001273A8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2740D87E24F799B8001273A8 /* Strings */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2740D87E24F799B8001273A8 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				2740D87F24F799C2001273A8 /* String+Empty.swift */,
+			);
+			path = Strings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +424,7 @@
 					};
 					2740D85624F79835001273A8 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					2740D85E24F79835001273A8 = {
 						CreatedOnToolsVersion = 11.6;
@@ -498,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2740D88024F799C2001273A8 /* String+Empty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +705,7 @@
 		2740D84124F78C40001273A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PruebaMaps/SupportingFiles/Info.plist;
@@ -693,6 +723,7 @@
 		2740D84224F78C40001273A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PruebaMaps/SupportingFiles/Info.plist;
@@ -790,6 +821,7 @@
 		2740D86F24F79836001273A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -807,6 +839,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -817,6 +850,7 @@
 		2740D87024F79836001273A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
