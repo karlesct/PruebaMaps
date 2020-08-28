@@ -9,11 +9,13 @@
 import UIKit
 import Foundation
 import CoreLocation
+import GoogleMaps
 
 internal protocol FirstViewProtocol: class {
     var title: String? { get set }
     func setLoading(_ loading: Bool)
     func setUserLocation(location: CLLocation?)
+    func update(with points: Points)
 }
 
 internal protocol FirstPresenterProtocol: class {
@@ -71,8 +73,8 @@ internal final class FirstPresenter: FirstPresenterProtocol {
             guard let `self` = self else { return }
             self.view?.setLoading(false)
             switch result {
-            case .success(let point):
-                print(point)
+            case .success(let points):
+                self.view?.update(with: points)
             case .failure(let error):
                 print(error)
             }
