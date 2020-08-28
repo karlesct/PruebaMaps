@@ -13,7 +13,7 @@ import CoreLocation
 internal protocol FirstViewProtocol: class {
     var title: String? { get set }
     func setLoading(_ loading: Bool)
-    func setUserLocation(location: CLLocationCoordinate2D?)
+    func setUserLocation(location: CLLocation?)
 }
 
 internal protocol FirstPresenterProtocol: class {
@@ -21,7 +21,7 @@ internal protocol FirstPresenterProtocol: class {
     var view: FirstViewProtocol? { get set }
     func loadView()
     func didAppearView()
-    func fetchPoints()
+    func fetchPoints(zone: String, loweLeft: CLLocationCoordinate2D, upperRight: CLLocationCoordinate2D)
 
 }
 
@@ -48,8 +48,6 @@ internal final class FirstPresenter: FirstPresenterProtocol {
 
         view?.title = "Maps"
 
-        fetchPoints()
-
     }
 
     func didAppearView() {
@@ -58,11 +56,12 @@ internal final class FirstPresenter: FirstPresenterProtocol {
 
     }
 
-    func fetchPoints() {
+    func fetchPoints(zone: String,
+                     loweLeft: CLLocationCoordinate2D,
+                     upperRight: CLLocationCoordinate2D) {
 
-        let zone = "lisboa"
-        let lowerLeft = Coordinates(latitud: 38.711046, longitud: -9.160096)
-        let upperRight = Coordinates(latitud: 38.739429, longitud: -9.137115)
+        let lowerLeft = Coordinates(latitud: Float(loweLeft.latitude), longitud: Float(loweLeft.longitude))
+        let upperRight = Coordinates(latitud: Float(upperRight.latitude), longitud: Float(upperRight.longitude))
         let pointRequest = PointRequest(zone: zone,
                                         lowerLeft: lowerLeft,
                                         upperRight: upperRight)
@@ -85,7 +84,7 @@ internal final class FirstPresenter: FirstPresenterProtocol {
 extension FirstPresenter: LocationServiceDelegate {
 
     func userLocation(manager: CLLocationManager) {
-        view?.setUserLocation(location: manager.location?.coordinate)
+        view?.setUserLocation(location: manager.location)
     }
 
 }
