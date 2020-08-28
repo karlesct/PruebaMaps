@@ -93,4 +93,12 @@ extension FirstViewController: FirstViewProtocol {
 
     }
 
+    func update(with points: Points) {
+
+        points.forEach { item in
+
+            item.marker.map = mapView
+            item.marker.tracksViewChanges = false // Stop tracking view changes to allow CPU to idle.
+        }
+    }
 }
