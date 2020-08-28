@@ -9,7 +9,7 @@
 import Foundation
 
 internal protocol FirstRepositoryProtocol {
-    func getPoints(pointRequest: PointRequest, completion completed: @escaping (Result<Point, RemoteError>) -> Void)
+    func getPoints(pointRequest: PointRequest, completion completed: @escaping (Result<Points, RemoteError>) -> Void)
 }
 
 internal final class FirstRepository {
@@ -28,15 +28,16 @@ internal final class FirstRepository {
 
 extension FirstRepository: FirstRepositoryProtocol {
 
-    func getPoints(pointRequest: PointRequest, completion completed: @escaping (Result<Point, RemoteError>) -> Void) {
+    func getPoints(pointRequest: PointRequest, completion completed: @escaping (Result<Points, RemoteError>) -> Void) {
 
-        remoteHandler.load(Point.self,
+        remoteHandler.load(PointsElementResponse.self,
                            from: .getPoints(pointRequest: pointRequest)) { result in
 
                             DispatchQueue.main.async {
                                 switch result {
                                 case .success(let point):
-                                    completed(.success(point))
+                                    let pointBind = PointElementBinding.bind(point)
+                                    completed(.success(pointBind))
                                 case .failure(let error):
                                     completed(.failure(error))
                                 }
