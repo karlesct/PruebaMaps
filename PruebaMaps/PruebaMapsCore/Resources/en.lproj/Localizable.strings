@@ -19,3 +19,8 @@
 "coreRemoteErrorInternalServer" = "Connection received an invalid server response";
 "coreRemoteErrorTimedOut" = "Connection timed out";
 "coreRemoteErrorNoContent" = "Connection retrieved no response";
+
+"id" = "Id: %@";
+"latitude" = "latitude: %f";
+"longitude" = "longitude: %f";
+

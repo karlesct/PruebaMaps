@@ -72,6 +72,7 @@
 		2740D90E24F92DEA001273A8 /* Array+Distinct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D90D24F92DEA001273A8 /* Array+Distinct.swift */; };
 		2740D91124F92E12001273A8 /* Array+DistinctTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91024F92E12001273A8 /* Array+DistinctTest.swift */; };
 		2740D91524F96E20001273A8 /* EndPointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91424F96E20001273A8 /* EndPointTest.swift */; };
+		2740D91824F97737001273A8 /* RemoteErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91724F97737001273A8 /* RemoteErrorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +211,7 @@
 		2740D90D24F92DEA001273A8 /* Array+Distinct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Distinct.swift"; sourceTree = "<group>"; };
 		2740D91024F92E12001273A8 /* Array+DistinctTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+DistinctTest.swift"; path = "PruebaMapsCore/Utils/Extensions/Array/Array+DistinctTest.swift"; sourceTree = SOURCE_ROOT; };
 		2740D91424F96E20001273A8 /* EndPointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTest.swift; sourceTree = "<group>"; };
+		2740D91724F97737001273A8 /* RemoteErrorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteErrorTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -727,6 +729,7 @@
 			isa = PBXGroup;
 			children = (
 				2740D91324F96E10001273A8 /* Api */,
+				2740D91624F9771B001273A8 /* Error */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -737,6 +740,14 @@
 				2740D91424F96E20001273A8 /* EndPointTest.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		2740D91624F9771B001273A8 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				2740D91724F97737001273A8 /* RemoteErrorTest.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1032,6 +1043,7 @@
 				2740D88D24F79B05001273A8 /* String+EmptyTest.swift in Sources */,
 				2740D91524F96E20001273A8 /* EndPointTest.swift in Sources */,
 				2740D91124F92E12001273A8 /* Array+DistinctTest.swift in Sources */,
+				2740D91824F97737001273A8 /* RemoteErrorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

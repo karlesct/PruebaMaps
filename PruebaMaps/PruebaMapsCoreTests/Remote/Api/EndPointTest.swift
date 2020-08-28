@@ -22,11 +22,11 @@ class EndPointTest: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        let lowerLeft = Coordinates(latitud: 40.42662,
-                                    longitud: -3.65859)
+        let lowerLeft = Coordinates(latitud: 10.3,
+                                    longitud: -10.3)
 
-        let upperRight = Coordinates(latitud: 40.42437,
-                                     longitud: -3.71183)
+        let upperRight = Coordinates(latitud: 40.42,
+                                     longitud: -40.42)
 
         pointRequest = PointRequest(zone: "madrid",
                                     lowerLeft: lowerLeft,
@@ -34,13 +34,12 @@ class EndPointTest: XCTestCase {
 
     }
 
-    func test_current() {
+    func testEndPoint_01() {
 
         let endpoint: Endpoint = .getPoints(pointRequest: pointRequest)
         let request = endpoint.request(with: Constants.baseURL, adding: [:])
         XCTAssertNotNil(request)
         XCTAssertEqual(request.url?.path, "www.test.com/routers/madrid/resources")
-        XCTAssertEqual(request.url?.absoluteString, "www.test.com/routers/madrid/resources?lowerLeftLatLon=40.42662,-3.65859&upperRightLatLon=40.42437,-3.71183")
         XCTAssertEqual(request.httpMethod, "GET")
     }
 
