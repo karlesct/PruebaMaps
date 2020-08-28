@@ -67,6 +67,8 @@
 		2740D8FC24F80235001273A8 /* DialogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8FB24F80235001273A8 /* DialogService.swift */; };
 		2740D8FE24F80607001273A8 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8FD24F80607001273A8 /* LocationService.swift */; };
 		2740D90024F80AFF001273A8 /* LocationServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8FF24F80AFF001273A8 /* LocationServiceAssembly.swift */; };
+		2740D90624F92C1D001273A8 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D90524F92C1D001273A8 /* UIColor+Random.swift */; };
+		2740D90B24F92CCC001273A8 /* UIColor+RandomTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D90A24F92CCC001273A8 /* UIColor+RandomTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +202,8 @@
 		2740D8FD24F80607001273A8 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		2740D8FF24F80AFF001273A8 /* LocationServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceAssembly.swift; sourceTree = "<group>"; };
 		2740D90324F81E60001273A8 /* madrid.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = madrid.gpx; path = ../madrid.gpx; sourceTree = "<group>"; };
+		2740D90524F92C1D001273A8 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
+		2740D90A24F92CCC001273A8 /* UIColor+RandomTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+RandomTest.swift"; path = "PruebaMapsCore/Utils/Extensions/Color/UIColor+RandomTest.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				2740D88324F79A26001273A8 /* Bundle */,
+				2740D90424F92BF9001273A8 /* Color */,
 				2740D87E24F799B8001273A8 /* Strings */,
 				2740D8F224F800AE001273A8 /* ViewController */,
 				2740D8F824F8013F001273A8 /* Window */,
@@ -450,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				2740D88824F79A9F001273A8 /* Bundle */,
+				2740D90724F92C76001273A8 /* Color */,
 				2740D88B24F79AF1001273A8 /* Strings */,
 				2740D8F524F800E8001273A8 /* ViewController */,
 			);
@@ -674,6 +680,22 @@
 				2740D8FD24F80607001273A8 /* LocationService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		2740D90424F92BF9001273A8 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				2740D90524F92C1D001273A8 /* UIColor+Random.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		2740D90724F92C76001273A8 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				2740D90A24F92CCC001273A8 /* UIColor+RandomTest.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -942,6 +964,7 @@
 				2740D88524F79A35001273A8 /* Bundle+Identifiers.swift in Sources */,
 				2740D8AC24F7AF1E001273A8 /* EndPoint.swift in Sources */,
 				2740D89424F7A078001273A8 /* FirstAssembly.swift in Sources */,
+				2740D90624F92C1D001273A8 /* UIColor+Random.swift in Sources */,
 				2740D90024F80AFF001273A8 /* LocationServiceAssembly.swift in Sources */,
 				2740D89C24F7A2C0001273A8 /* FirstViewController.swift in Sources */,
 				2740D89A24F7A1F5001273A8 /* FirstPresenter.swift in Sources */,
@@ -961,6 +984,7 @@
 			files = (
 				2740D88A24F79AB8001273A8 /* Bundle+IdentifiersTest.swift in Sources */,
 				2740D86724F79835001273A8 /* PruebaMapsCoreTests.swift in Sources */,
+				2740D90B24F92CCC001273A8 /* UIColor+RandomTest.swift in Sources */,
 				2740D88F24F79C02001273A8 /* String+LocalizedTest.swift in Sources */,
 				2740D8F724F80119001273A8 /* ViewController+GetTopViewControllerTest.swift in Sources */,
 				2740D88D24F79B05001273A8 /* String+EmptyTest.swift in Sources */,
