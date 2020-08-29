@@ -382,9 +382,9 @@
 			children = (
 				2740D89124F79F18001273A8 /* Assembly */,
 				2740D89024F79F0F001273A8 /* Features */,
-				2740D87C24F7999F001273A8 /* Utils */,
 				2740D8A324F7AD70001273A8 /* Remote */,
 				2740D87624F7990B001273A8 /* Resources */,
+				2740D87C24F7999F001273A8 /* Utils */,
 				2740D87524F7989B001273A8 /* SupportingFiles */,
 			);
 			path = PruebaMapsCore;
