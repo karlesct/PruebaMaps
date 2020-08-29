@@ -10,7 +10,6 @@ public extension String {
 
     var localized: String {
         guard let bundle = Bundle.CoreIdentifier else { return "**\(self)**" }
-        
         return NSLocalizedString(self,
                                  tableName: "Localizable",
                                  bundle: bundle,
