@@ -101,17 +101,25 @@ extension LocationService: CLLocationManagerDelegate {
 
     public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
 
-        guard status == .authorizedWhenInUse else {
+        switch status {
+        case .authorizedAlways,
+             .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+        case .denied,
+             .notDetermined, .restricted:
+            locationManager.stopUpdatingLocation()
+        default:
             return
         }
-
-        delegate?.userLocation(manager: manager)
 
     }
 
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 
-        guard locations.first != nil else {
+        let status = CLLocationManager.authorizationStatus()
+
+        guard status == .authorizedAlways || status == .authorizedWhenInUse,
+            locations.first != nil else {
             return
         }
 
