@@ -89,7 +89,7 @@ internal final class PointElementBinding {
 
         pointElementResponse.forEach { item in
             let position = CLLocationCoordinate2D(latitude: CLLocationDegrees(item.pointY),
-                                                  longitude:  CLLocationDegrees(item.pointX))
+                                                  longitude: CLLocationDegrees(item.pointX))
             let marker = GMSMarker(position: position)
 
             let color = uniqueCompanyZoneIDWithColor.first(where: {$0.companyZoneID == item.companyZoneID})?.color

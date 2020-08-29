@@ -72,11 +72,11 @@ extension FirstViewController: FirstViewProtocol {
                                            bearing: .zero,
                                            viewingAngle: .zero)
 
-        let lowerLeftPoint = CGPoint(x: mapView.frame.height, y: .zero)
+        let lowerLeftPoint = CGPoint(x: .zero, y: view.frame.origin.y + mapView.frame.height)
         let lowerLeft = mapView.projection.coordinate(for: lowerLeftPoint)
         print(lowerLeft)
 
-        let upperRightPoint = CGPoint(x: .zero, y: mapView.frame.width)
+        let upperRightPoint = CGPoint(x: view.frame.origin.x + mapView.frame.width, y: .zero)
         let upperRight = mapView.projection.coordinate(for: upperRightPoint)
         print(upperRight)
 
