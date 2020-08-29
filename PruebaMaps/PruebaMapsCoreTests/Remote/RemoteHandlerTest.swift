@@ -137,7 +137,6 @@ class RemoteHandlerTest: XCTestCase {
         remoteHandler.load(PointsElementResponse.self,
                            from: .getPoints(pointRequest: pointRequest)) { result in
 
-
                             switch result {
                             case .success:
                                 remoteError = nil
@@ -208,6 +207,59 @@ class RemoteHandlerTest: XCTestCase {
         } else {
             XCTFail("WebService call expected to fail and succeeded")
         }
+    }
+
+    func testRemoteHandler_06() {
+
+        let response = HTTPURLResponse(url: Constants.baseURL,
+                                       statusCode: 200,
+                                       httpVersion: nil,
+                                       headerFields: nil)
+        session.response = response
+
+        let points = [PointElementResponse(id: "testID",
+                                          name: "testName",
+                                          pointX: 10.1,
+                                          pointY: 10.2,
+                                          scheduledArrival: 1,
+                                          locationType: 2,
+                                          companyZoneID: 3,
+                                          lat: 1.4,
+                                          lon: 1.5,
+                                          licencePlate: "testPlate",
+                                          range: 10,
+                                          batteryLevel: 11,
+                                          seats: 12,
+                                          model: "testModel",
+                                          resourceImageID: "testResourceImageID",
+                                          realTimeData: true,
+                                          resourceType: "testResourceType",
+                                          helmets: 13,
+                                          station: false,
+                                          availableResources: 14,
+                                          spacesAvailable: 15,
+                                          allowDropoff: true,
+                                          bikesAvailable: 16)]
+
+        let encoder = JSONEncoder()
+        let data = try? encoder.encode(points)
+
+        session.data = data
+
+        var succeeded = false
+        remoteHandler.load(PointsElementResponse.self,
+                           from: .getPoints(pointRequest: pointRequest)) { result in
+
+                            switch result {
+                            case .success:
+                                succeeded = true
+                            case .failure:
+                                succeeded = false
+                            }
+
+        }
+
+        XCTAssertTrue(succeeded)
     }
 
 }
