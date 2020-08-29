@@ -74,6 +74,8 @@
 		2740D91524F96E20001273A8 /* EndPointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91424F96E20001273A8 /* EndPointTest.swift */; };
 		2740D91824F97737001273A8 /* RemoteErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91724F97737001273A8 /* RemoteErrorTest.swift */; };
 		2740D91A24F97D41001273A8 /* RemoteHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91924F97D41001273A8 /* RemoteHandlerTest.swift */; };
+		2788380224FA483D00AD6E1A /* PointElementTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2788380124FA483D00AD6E1A /* PointElementTest.swift */; };
+		2788380424FA4BD000AD6E1A /* FirstRespositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +216,8 @@
 		2740D91424F96E20001273A8 /* EndPointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTest.swift; sourceTree = "<group>"; };
 		2740D91724F97737001273A8 /* RemoteErrorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteErrorTest.swift; sourceTree = "<group>"; };
 		2740D91924F97D41001273A8 /* RemoteHandlerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHandlerTest.swift; sourceTree = "<group>"; };
+		2788380124FA483D00AD6E1A /* PointElementTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointElementTest.swift; sourceTree = "<group>"; };
+		2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRespositoryTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,6 +393,7 @@
 		2740D86524F79835001273A8 /* PruebaMapsCoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				278837FC24FA44F000AD6E1A /* Features */,
 				2740D91224F96BA0001273A8 /* Remote */,
 				2740D88624F79A88001273A8 /* Utils */,
 				2740D86624F79835001273A8 /* PruebaMapsCoreTests.swift */,
@@ -753,6 +758,31 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		278837FC24FA44F000AD6E1A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				278837FD24FA44FF00AD6E1A /* Repository */,
+				2788380024FA482800AD6E1A /* Model */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		278837FD24FA44FF00AD6E1A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2788380024FA482800AD6E1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2788380124FA483D00AD6E1A /* PointElementTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1046,6 +1076,8 @@
 				2740D88D24F79B05001273A8 /* String+EmptyTest.swift in Sources */,
 				2740D91A24F97D41001273A8 /* RemoteHandlerTest.swift in Sources */,
 				2740D91524F96E20001273A8 /* EndPointTest.swift in Sources */,
+				2788380424FA4BD000AD6E1A /* FirstRespositoryTest.swift in Sources */,
+				2788380224FA483D00AD6E1A /* PointElementTest.swift in Sources */,
 				2740D91124F92E12001273A8 /* Array+DistinctTest.swift in Sources */,
 				2740D91824F97737001273A8 /* RemoteErrorTest.swift in Sources */,
 			);
