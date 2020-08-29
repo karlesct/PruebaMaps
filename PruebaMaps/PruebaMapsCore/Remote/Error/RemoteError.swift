@@ -62,3 +62,5 @@ public enum RemoteError: LocalizedError {
         }
     }
 }
+
+extension RemoteError: Equatable {}

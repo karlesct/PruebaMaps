@@ -73,6 +73,7 @@
 		2740D91124F92E12001273A8 /* Array+DistinctTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91024F92E12001273A8 /* Array+DistinctTest.swift */; };
 		2740D91524F96E20001273A8 /* EndPointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91424F96E20001273A8 /* EndPointTest.swift */; };
 		2740D91824F97737001273A8 /* RemoteErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91724F97737001273A8 /* RemoteErrorTest.swift */; };
+		2740D91A24F97D41001273A8 /* RemoteHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91924F97D41001273A8 /* RemoteHandlerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +213,7 @@
 		2740D91024F92E12001273A8 /* Array+DistinctTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+DistinctTest.swift"; path = "PruebaMapsCore/Utils/Extensions/Array/Array+DistinctTest.swift"; sourceTree = SOURCE_ROOT; };
 		2740D91424F96E20001273A8 /* EndPointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTest.swift; sourceTree = "<group>"; };
 		2740D91724F97737001273A8 /* RemoteErrorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteErrorTest.swift; sourceTree = "<group>"; };
+		2740D91924F97D41001273A8 /* RemoteHandlerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHandlerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -730,6 +732,7 @@
 			children = (
 				2740D91324F96E10001273A8 /* Api */,
 				2740D91624F9771B001273A8 /* Error */,
+				2740D91924F97D41001273A8 /* RemoteHandlerTest.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -1041,6 +1044,7 @@
 				2740D88F24F79C02001273A8 /* String+LocalizedTest.swift in Sources */,
 				2740D8F724F80119001273A8 /* ViewController+GetTopViewControllerTest.swift in Sources */,
 				2740D88D24F79B05001273A8 /* String+EmptyTest.swift in Sources */,
+				2740D91A24F97D41001273A8 /* RemoteHandlerTest.swift in Sources */,
 				2740D91524F96E20001273A8 /* EndPointTest.swift in Sources */,
 				2740D91124F92E12001273A8 /* Array+DistinctTest.swift in Sources */,
 				2740D91824F97737001273A8 /* RemoteErrorTest.swift in Sources */,
