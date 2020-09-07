@@ -10,19 +10,17 @@ import UIKit
 import Foundation
 import CoreLocation
 import GoogleMaps
-
-internal protocol FirstViewProtocol: class {
-    var title: String? { get set }
-    func setLoading(_ loading: Bool)
-    func setUserLocation(location: CLLocation?)
-    func update(with points: Points)
-}
+import RxSwift
+import RxCocoa
 
 internal protocol FirstPresenterProtocol: class {
 
-    var view: FirstViewProtocol? { get set }
-    func loadView()
-    func didAppearView()
+    var titlePageObservable: Observable<String> { get }
+    var pointsObservable: Observable<Points> { get }
+    var locationObservable: Observable<CLLocation?> { get }
+
+    func viewDidLoad()
+    func viewDidAppear()
     func fetchPoints(zone: String, loweLeft: CLLocationCoordinate2D, upperRight: CLLocationCoordinate2D)
 
 }
@@ -34,25 +32,54 @@ internal final class FirstPresenter: FirstPresenterProtocol {
     private let repository: FirstRepositoryProtocol
     private var locationService: LocationServiceProtocol
 
-    // MARK: - Fields
+    private var disposeBag: DisposeBag?
 
-    weak var view: FirstViewProtocol?
+    // Points
+
+    private let titlePageSubject = BehaviorSubject<String>(value: .empty)
+    public var titlePageObservable: Observable<String> {
+        return titlePageSubject.asObservable()
+    }
+
+    // Points
+
+    private let pointsSubject = BehaviorSubject<Points>(value: [])
+    public var pointsObservable: Observable<Points> {
+        return pointsSubject.asObservable()
+    }
+
+    // Location
+
+    private let locationSubject = BehaviorSubject<CLLocation?>(value: nil)
+    public var locationObservable: Observable<CLLocation?> {
+        return locationSubject.asObservable()
+    }
+
+    // MARK: - Fields
 
     // MARK: - Init
 
     init(repository: FirstRepositoryProtocol,
          locationService: LocationServiceProtocol) {
+
         self.repository = repository
         self.locationService = locationService
+
+        self.disposeBag = DisposeBag()
     }
 
-    func loadView() {
+    deinit {
 
-        view?.title = "Maps"
+        self.disposeBag = nil
 
     }
 
-    func didAppearView() {
+    func viewDidLoad() {
+
+        self.titlePageSubject.onNext("Maps")
+    }
+
+    func viewDidAppear() {
 
         locationService.delegate = self
 
@@ -71,10 +98,9 @@ internal final class FirstPresenter: FirstPresenterProtocol {
         repository.getPoints(pointRequest: pointRequest,
                              completion: { [weak self] result in
             guard let `self` = self else { return }
-            self.view?.setLoading(false)
             switch result {
             case .success(let points):
-                self.view?.update(with: points)
+                self.pointsSubject.onNext(points)
             case .failure(let error):
                 print(error)
             }
@@ -86,7 +112,7 @@ internal final class FirstPresenter: FirstPresenterProtocol {
 extension FirstPresenter: LocationServiceDelegate {
 
     func userLocation(manager: CLLocationManager) {
-        view?.setUserLocation(location: manager.location)
+        self.locationSubject.onNext(manager.location)
     }
 
 }
