@@ -16,11 +16,17 @@ import RxCocoa
 internal protocol FirstPresenterProtocol: class {
 
     var titlePageObservable: Observable<String> { get }
+    var titlePageSubject: BehaviorSubject<String> { get set }
+
     var pointsObservable: Observable<Points> { get }
+    var pointsSubject: BehaviorSubject<Points> { get set }
+
     var locationObservable: Observable<CLLocation?> { get }
+    var locationSubject: BehaviorSubject<CLLocation?> { get set }
 
     func viewDidLoad()
     func viewDidAppear()
+
     func fetchPoints(zone: String, loweLeft: CLLocationCoordinate2D, upperRight: CLLocationCoordinate2D)
 
 }
@@ -36,21 +42,21 @@ internal final class FirstPresenter: FirstPresenterProtocol {
 
     // Points
 
-    private let titlePageSubject = BehaviorSubject<String>(value: .empty)
+    public var titlePageSubject: BehaviorSubject<String> = BehaviorSubject<String>(value: .empty) // if no test that can we private
     public var titlePageObservable: Observable<String> {
         return titlePageSubject.asObservable()
     }
 
     // Points
 
-    private let pointsSubject = BehaviorSubject<Points>(value: [])
+    public var pointsSubject: BehaviorSubject<Points> = BehaviorSubject<Points>(value: [])   // if no test that can we private
     public var pointsObservable: Observable<Points> {
         return pointsSubject.asObservable()
     }
 
     // Location
 
-    private let locationSubject = BehaviorSubject<CLLocation?>(value: nil)
+    public var locationSubject: BehaviorSubject<CLLocation?> = BehaviorSubject<CLLocation?>(value: nil)   // if no test that can we private
     public var locationObservable: Observable<CLLocation?> {
         return locationSubject.asObservable()
     }
