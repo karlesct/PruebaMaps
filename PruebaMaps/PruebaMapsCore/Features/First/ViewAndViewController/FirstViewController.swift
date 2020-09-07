@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import RxSwift
 
 internal final class FirstViewController: UIViewController {
 
@@ -18,13 +19,18 @@ internal final class FirstViewController: UIViewController {
     // MARK: - Properties
 
     private let presenter: FirstPresenterProtocol
+    private var disposeBag: DisposeBag?
 
     // MARK: - Init
 
     init(presenter: FirstPresenterProtocol) {
         self.presenter = presenter
 
+        self.disposeBag = DisposeBag()
+
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
+
+        self.setupBindings()
     }
 
     required init?(coder: NSCoder) {
@@ -33,33 +39,70 @@ internal final class FirstViewController: UIViewController {
 
     // MARK: - Life cycle
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override public func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
 
-        setupUI()
-
-        presenter.view = self
-
-        presenter.loadView()
-    }
-
-    public override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        presenter.didAppearView()
+        self.disposeBag = nil
     }
 
     // MARK: - Private methods
 
-    private func setupUI() {
+    private func setupBindings() {
 
+        guard let disposeBag = disposeBag else { return }
+
+        // ViewDidLoad
+        self.rx.viewDidLoad
+            .subscribe(onNext: {
+                self.presenter.viewDidLoad()
+            })
+            .disposed(by: disposeBag)
+
+        // ViewDidAppear
+        self.rx.viewDidAppear
+            .subscribe({ _ in
+                self.presenter.viewDidAppear()
+            })
+            .disposed(by: disposeBag)
+
+        // Points
+        presenter.titlePageObservable
+            .subscribe(onNext: { [weak self] titlePage in
+                guard let strongSelf = self else { return }
+                strongSelf.title = titlePage
+            })
+            .disposed(by: disposeBag)
+
+        // Points
+        presenter.pointsObservable
+            .subscribe(onNext: { [weak self] points in
+                guard let strongSelf = self else { return }
+                strongSelf.update(with: points)
+            })
+            .disposed(by: disposeBag)
+
+        // Location
+        presenter.locationObservable
+            .subscribe(onNext: { [weak self] location in
+                guard let strongSelf = self else { return }
+                strongSelf.setUserLocation(location: location)
+            })
+            .disposed(by: disposeBag)
     }
-
-    // MARK: - Actions
 
 }
 
-extension FirstViewController: FirstViewProtocol {
+extension FirstViewController {
+
+    func update(with points: Points) {
+
+        points.forEach { item in
+
+            item.marker.map = mapView
+            item.marker.tracksViewChanges = false // Stop tracking view changes to allow CPU to idle.
+        }
+    }
+
     func setUserLocation(location: CLLocation?) {
 
         guard let location = location else { return }
@@ -87,18 +130,5 @@ extension FirstViewController: FirstViewProtocol {
             self.presenter.fetchPoints(zone: locality, loweLeft: lowerLeft, upperRight: upperRight)
         })
 
-    }
-
-    func setLoading(_ loading: Bool) {
-
-    }
-
-    func update(with points: Points) {
-
-        points.forEach { item in
-
-            item.marker.map = mapView
-            item.marker.tracksViewChanges = false // Stop tracking view changes to allow CPU to idle.
-        }
     }
 }
