@@ -74,7 +74,6 @@
 		2740D91524F96E20001273A8 /* EndPointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91424F96E20001273A8 /* EndPointTest.swift */; };
 		2740D91824F97737001273A8 /* RemoteErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91724F97737001273A8 /* RemoteErrorTest.swift */; };
 		2740D91A24F97D41001273A8 /* RemoteHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91924F97D41001273A8 /* RemoteHandlerTest.swift */; };
-		2788380224FA483D00AD6E1A /* PointElementTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2788380124FA483D00AD6E1A /* PointElementTest.swift */; };
 		2788380424FA4BD000AD6E1A /* FirstRespositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */; };
 		27C3D65625062CAF00B0D307 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; };
 		27C3D65725062CAF00B0D307 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -83,6 +82,12 @@
 		27C3D666250637B100B0D307 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D665250637B100B0D307 /* RxRelay.framework */; };
 		27C3D667250637B100B0D307 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D665250637B100B0D307 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		27C3D66F2506679300B0D307 /* ViewController+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3D66E2506679300B0D307 /* ViewController+Reactive.swift */; };
+		27C3D67125067AD700B0D307 /* ViewController+ReactiveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3D67025067AD700B0D307 /* ViewController+ReactiveTest.swift */; };
+		27C3D67825067F7100B0D307 /* FirstPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3D67725067F7100B0D307 /* FirstPresenterTest.swift */; };
+		27C3D67B25068D7300B0D307 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D67A25068D7300B0D307 /* RxTest.framework */; };
+		27C3D67C25068D7300B0D307 /* RxTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D67A25068D7300B0D307 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		27C3D67E2506918000B0D307 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D67D2506918000B0D307 /* RxBlocking.framework */; };
+		27C3D67F2506918000B0D307 /* RxBlocking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D67D2506918000B0D307 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,8 +146,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				27C3D67C25068D7300B0D307 /* RxTest.framework in Embed Frameworks */,
 				27C3D65725062CAF00B0D307 /* RxSwift.framework in Embed Frameworks */,
 				2740D8C924F7EAD0001273A8 /* GoogleMaps.framework in Embed Frameworks */,
+				27C3D67F2506918000B0D307 /* RxBlocking.framework in Embed Frameworks */,
 				27C3D667250637B100B0D307 /* RxRelay.framework in Embed Frameworks */,
 				2740D8CD24F7EAD0001273A8 /* GoogleMapsCore.framework in Embed Frameworks */,
 				27C3D6612506351E00B0D307 /* RxCocoa.framework in Embed Frameworks */,
@@ -232,6 +239,10 @@
 		27C3D65F2506351E00B0D307 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		27C3D665250637B100B0D307 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		27C3D66E2506679300B0D307 /* ViewController+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Reactive.swift"; sourceTree = "<group>"; };
+		27C3D67025067AD700B0D307 /* ViewController+ReactiveTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ViewController+ReactiveTest.swift"; path = "PruebaMapsCore/Utils/Extensions/ViewController/ViewController+ReactiveTest.swift"; sourceTree = SOURCE_ROOT; };
+		27C3D67725067F7100B0D307 /* FirstPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPresenterTest.swift; sourceTree = "<group>"; };
+		27C3D67A25068D7300B0D307 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		27C3D67D2506918000B0D307 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,9 +284,11 @@
 				2740D8DE24F7EBFC001273A8 /* CoreText.framework in Frameworks */,
 				2740D8DC24F7EBF4001273A8 /* CoreTelephony.framework in Frameworks */,
 				27C3D666250637B100B0D307 /* RxRelay.framework in Frameworks */,
+				27C3D67B25068D7300B0D307 /* RxTest.framework in Frameworks */,
 				2740D8DA24F7EBEE001273A8 /* CoreLocation.framework in Frameworks */,
 				2740D8D824F7EBE8001273A8 /* CoreImage.framework in Frameworks */,
 				2740D8D624F7EBE1001273A8 /* CoreGraphics.framework in Frameworks */,
+				27C3D67E2506918000B0D307 /* RxBlocking.framework in Frameworks */,
 				2740D8D424F7EBDB001273A8 /* CoreData.framework in Frameworks */,
 				2740D8D224F7EBD1001273A8 /* Accelerate.framework in Frameworks */,
 				2740D8C824F7EAD0001273A8 /* GoogleMaps.framework in Frameworks */,
@@ -638,6 +651,8 @@
 		2740D8C424F7EAD0001273A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27C3D67D2506918000B0D307 /* RxBlocking.framework */,
+				27C3D67A25068D7300B0D307 /* RxTest.framework */,
 				27C3D665250637B100B0D307 /* RxRelay.framework */,
 				27C3D65F2506351E00B0D307 /* RxCocoa.framework */,
 				27C3D65525062CAF00B0D307 /* RxSwift.framework */,
@@ -684,6 +699,7 @@
 			isa = PBXGroup;
 			children = (
 				2740D8F624F80119001273A8 /* ViewController+GetTopViewControllerTest.swift */,
+				27C3D67025067AD700B0D307 /* ViewController+ReactiveTest.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -773,8 +789,7 @@
 		278837FC24FA44F000AD6E1A /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				278837FD24FA44FF00AD6E1A /* Repository */,
-				2788380024FA482800AD6E1A /* Model */,
+				27C3D67525067F3400B0D307 /* First */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -802,6 +817,24 @@
 				27C3D66E2506679300B0D307 /* ViewController+Reactive.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		27C3D67525067F3400B0D307 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				2788380024FA482800AD6E1A /* Model */,
+				27C3D67625067F4F00B0D307 /* Presenter */,
+				278837FD24FA44FF00AD6E1A /* Repository */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		27C3D67625067F4F00B0D307 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				27C3D67725067F7100B0D307 /* FirstPresenterTest.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1090,16 +1123,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C3D67125067AD700B0D307 /* ViewController+ReactiveTest.swift in Sources */,
 				2740D88A24F79AB8001273A8 /* Bundle+IdentifiersTest.swift in Sources */,
 				2740D86724F79835001273A8 /* PruebaMapsCoreTests.swift in Sources */,
 				2740D90B24F92CCC001273A8 /* UIColor+RandomTest.swift in Sources */,
 				2740D88F24F79C02001273A8 /* String+LocalizedTest.swift in Sources */,
+				27C3D67825067F7100B0D307 /* FirstPresenterTest.swift in Sources */,
 				2740D8F724F80119001273A8 /* ViewController+GetTopViewControllerTest.swift in Sources */,
 				2740D88D24F79B05001273A8 /* String+EmptyTest.swift in Sources */,
 				2740D91A24F97D41001273A8 /* RemoteHandlerTest.swift in Sources */,
 				2740D91524F96E20001273A8 /* EndPointTest.swift in Sources */,
 				2788380424FA4BD000AD6E1A /* FirstRespositoryTest.swift in Sources */,
-				2788380224FA483D00AD6E1A /* PointElementTest.swift in Sources */,
 				2740D91124F92E12001273A8 /* Array+DistinctTest.swift in Sources */,
 				2740D91824F97737001273A8 /* RemoteErrorTest.swift in Sources */,
 			);
@@ -1457,6 +1491,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PruebaMapsCore/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PruebaMapsCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1476,6 +1514,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PruebaMapsCore/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PruebaMapsCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
