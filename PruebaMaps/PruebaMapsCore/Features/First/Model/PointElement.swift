@@ -46,7 +46,7 @@ struct PointElementResponse: Codable {
 
 typealias Points = [PointElement]
 
-struct PointElement {
+struct PointElement: Equatable {
     let id: String
     let name: String
     let lat: String
