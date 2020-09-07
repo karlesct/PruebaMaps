@@ -21,9 +21,9 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
   #- Pods
   #- Source/ExcludedFolder
   #- Source/ExcludedFile.swift
-  - PruebaMaps/PruebaMaps/PruebaMapsCoreTests
+  - PruebaMapsCoreTests
   - PruebaMapsUITests
-  - PruebaMaps/PruebaMaps/PruebaMapsCore/Features/First/Model/PointElement.swift
+  - PruebaMapsCore/Carthage
   #- Source/*/ExcludedFile.swift # Exclude files with a wildcard
 analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
   - explicit_self
