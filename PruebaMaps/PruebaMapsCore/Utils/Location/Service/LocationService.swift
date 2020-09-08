@@ -85,15 +85,17 @@ public class LocationService: NSObject, LocationServiceProtocol {
     }
 
     private func requestAuthorization() {
-        dialogService?.showAlert(title: "",
-                                 message: "change_location_settings",
-                                 btAcceptText: "open_settings",
-                                 btCancelText: "cancel",
-                                 btAcceptCompletion: {
-                                    if let url = URL(string: UIApplication.openSettingsURLString) {
-                                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                                    }
-        })
+
+        UIAlertController.Builder()
+            .withTitle("warning".localized)
+            .withMessage("change_location_settings".localized)
+            .addActionWithTitle("open_settings".localized, handler: { _ in
+                if let url = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            })
+            .addActionWithTitle("cancel".localized)
+            .show()
     }
 }
 

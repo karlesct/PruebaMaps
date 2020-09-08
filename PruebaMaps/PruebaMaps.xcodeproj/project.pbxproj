@@ -64,7 +64,6 @@
 		2740D8F424F800CB001273A8 /* ViewController+GetTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8F324F800CB001273A8 /* ViewController+GetTopViewController.swift */; };
 		2740D8F724F80119001273A8 /* ViewController+GetTopViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8F624F80119001273A8 /* ViewController+GetTopViewControllerTest.swift */; };
 		2740D8FA24F80150001273A8 /* Window+VisibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8F924F80150001273A8 /* Window+VisibleViewController.swift */; };
-		2740D8FC24F80235001273A8 /* DialogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8FB24F80235001273A8 /* DialogService.swift */; };
 		2740D8FE24F80607001273A8 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8FD24F80607001273A8 /* LocationService.swift */; };
 		2740D90024F80AFF001273A8 /* LocationServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D8FF24F80AFF001273A8 /* LocationServiceAssembly.swift */; };
 		2740D90624F92C1D001273A8 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D90524F92C1D001273A8 /* UIColor+Random.swift */; };
@@ -75,6 +74,7 @@
 		2740D91824F97737001273A8 /* RemoteErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91724F97737001273A8 /* RemoteErrorTest.swift */; };
 		2740D91A24F97D41001273A8 /* RemoteHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91924F97D41001273A8 /* RemoteHandlerTest.swift */; };
 		275EF34825077453001A8CB5 /* PointElementTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF34725077453001A8CB5 /* PointElementTest.swift */; };
+		275EF35325079185001A8CB5 /* UIAlertController+Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF35225079185001A8CB5 /* UIAlertController+Builder.swift */; };
 		2788380424FA4BD000AD6E1A /* FirstRespositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */; };
 		27C3D65625062CAF00B0D307 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; };
 		27C3D65725062CAF00B0D307 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -223,7 +223,6 @@
 		2740D8F324F800CB001273A8 /* ViewController+GetTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ViewController+GetTopViewController.swift"; path = "PruebaMapsCore/Utils/Extensions/ViewController/ViewController+GetTopViewController.swift"; sourceTree = SOURCE_ROOT; };
 		2740D8F624F80119001273A8 /* ViewController+GetTopViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ViewController+GetTopViewControllerTest.swift"; path = "PruebaMapsCore/Features/First/Repository/ViewController+GetTopViewControllerTest.swift"; sourceTree = SOURCE_ROOT; };
 		2740D8F924F80150001273A8 /* Window+VisibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Window+VisibleViewController.swift"; sourceTree = "<group>"; };
-		2740D8FB24F80235001273A8 /* DialogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogService.swift; sourceTree = "<group>"; };
 		2740D8FD24F80607001273A8 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		2740D8FF24F80AFF001273A8 /* LocationServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceAssembly.swift; sourceTree = "<group>"; };
 		2740D90324F81E60001273A8 /* madrid.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = madrid.gpx; path = ../madrid.gpx; sourceTree = "<group>"; };
@@ -235,6 +234,7 @@
 		2740D91724F97737001273A8 /* RemoteErrorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteErrorTest.swift; sourceTree = "<group>"; };
 		2740D91924F97D41001273A8 /* RemoteHandlerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHandlerTest.swift; sourceTree = "<group>"; };
 		275EF34725077453001A8CB5 /* PointElementTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointElementTest.swift; sourceTree = "<group>"; };
+		275EF35225079185001A8CB5 /* UIAlertController+Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Builder.swift"; sourceTree = "<group>"; };
 		2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRespositoryTest.swift; sourceTree = "<group>"; };
 		27C3D65525062CAF00B0D307 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		27C3D65F2506351E00B0D307 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -453,7 +453,6 @@
 		2740D87C24F7999F001273A8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2740D8F124F80069001273A8 /* Dialog */,
 				2740D8F024F8004E001273A8 /* Location */,
 				2740D8AF24F7B140001273A8 /* HTTP */,
 				2740D87D24F799A8001273A8 /* Extensions */,
@@ -464,6 +463,7 @@
 		2740D87D24F799A8001273A8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				275EF35125079171001A8CB5 /* Alert */,
 				2740D90C24F92DD6001273A8 /* Array */,
 				2740D88324F79A26001273A8 /* Bundle */,
 				2740D90424F92BF9001273A8 /* Color */,
@@ -688,14 +688,6 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
-		2740D8F124F80069001273A8 /* Dialog */ = {
-			isa = PBXGroup;
-			children = (
-				2740D8FB24F80235001273A8 /* DialogService.swift */,
-			);
-			path = Dialog;
-			sourceTree = "<group>";
-		};
 		2740D8F524F800E8001273A8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -785,6 +777,14 @@
 				2740D91724F97737001273A8 /* RemoteErrorTest.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		275EF35125079171001A8CB5 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				275EF35225079185001A8CB5 /* UIAlertController+Builder.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		278837FC24FA44F000AD6E1A /* Features */ = {
@@ -1108,9 +1108,9 @@
 				2740D90624F92C1D001273A8 /* UIColor+Random.swift in Sources */,
 				27C3D66F2506679300B0D307 /* ViewController+Reactive.swift in Sources */,
 				2740D90024F80AFF001273A8 /* LocationServiceAssembly.swift in Sources */,
+				275EF35325079185001A8CB5 /* UIAlertController+Builder.swift in Sources */,
 				2740D89C24F7A2C0001273A8 /* FirstViewController.swift in Sources */,
 				2740D89A24F7A1F5001273A8 /* FirstPresenter.swift in Sources */,
-				2740D8FC24F80235001273A8 /* DialogService.swift in Sources */,
 				2740D8AE24F7B03B001273A8 /* RemoteHandler.swift in Sources */,
 				2740D8A024F7A464001273A8 /* CoreAssembly.swift in Sources */,
 				2740D8A624F7AD96001273A8 /* RemoteAssembly.swift in Sources */,

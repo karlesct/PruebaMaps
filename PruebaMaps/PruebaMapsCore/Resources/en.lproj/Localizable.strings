@@ -26,7 +26,8 @@
 
 // MARK: - Location Sevice
 
+"warning" = "Warning";
 "open_settings" = "Open settings";
-"change_location_settings" = "Change location settings";
+"change_location_settings" = "We need location permission to work. Please change the settings";
 "cancel" = "Cancel";
 
