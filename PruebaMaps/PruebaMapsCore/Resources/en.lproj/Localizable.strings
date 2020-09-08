@@ -24,3 +24,9 @@
 "latitude" = "latitude: %f";
 "longitude" = "longitude: %f";
 
+// MARK: - Location Sevice
+
+"open_settings" = "Open settings";
+"change_location_settings" = "Change location settings";
+"cancel" = "Cancel";
+
