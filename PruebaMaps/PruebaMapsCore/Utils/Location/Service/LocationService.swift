@@ -31,16 +31,7 @@ public class LocationService: NSObject, LocationServiceProtocol {
         }
     }
 
-    private let dialogService: DialogServiceProtocol?
     private let locationManager = CLLocationManager()
-
-    // MARK: Init
-
-    public init(dialogService: DialogServiceProtocol) {
-
-        self.dialogService = dialogService
-
-    }
 
     private func initLocation() {
 

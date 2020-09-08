@@ -12,7 +12,7 @@ public final class LocationServiceAssembly {
 
     // MARK: - Properties
 
-    private(set) lazy var locationService = LocationService(dialogService: dialogService())
+    private(set) lazy var locationService = LocationService()
 
     // MARK: - Init
 
@@ -21,10 +21,5 @@ public final class LocationServiceAssembly {
     }
 
     // MARK: - Internal Methods
-
-    func dialogService() -> DialogServiceProtocol {
-
-        return DialogService()
-    }
 
 }
