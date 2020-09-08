@@ -92,11 +92,12 @@ class FirstPresenterTest: XCTestCase {
     }
 
     func testFirstPresenter_03() {
-        let title = presenter.locationObservable.subscribeOn(scheduler)
+        let locationObserver = presenter.locationObservable.subscribeOn(scheduler)
 
-        presenter.locationSubject.onNext(nil)
-
-        XCTAssertEqual(try title.toBlocking().first(),nil)
+        let void: CLLocation? = nil
+        presenter.locationSubject.onNext(void)
+        
+        XCTAssertEqual(try locationObserver.toBlocking().first(), void)
 
     }
 
@@ -122,5 +123,45 @@ class FirstPresenterTest: XCTestCase {
         XCTAssertEqual(try pointsObserver.toBlocking().first(), empty)
 
     }
+
+    func testFirstPresenter_06() {
+        let pointsObserver = presenter.pointsObservable.subscribeOn(scheduler)
+
+        let position = CLLocationCoordinate2D(latitude: CLLocationDegrees(10.1),
+                                              longitude: CLLocationDegrees(10.2))
+        let marker = GMSMarker(position: position)
+
+        let points: [PointElement] = [PointElement(id: "testID",
+                                                   name: "testName",
+                                                   lat: 1.4,
+                                                   lon: 1.5,
+                                                   companyZoneID: 3,
+                                                   marker: marker),
+                                      PointElement(id: "testID2",
+                                                   name: "testName2",
+                                                   lat: 1.6,
+                                                   lon: 1.7,
+                                                   companyZoneID: 4,
+                                                   marker: marker)]
+        presenter.pointsSubject.onNext(points)
+
+        XCTAssertEqual(try pointsObserver.toBlocking().first()?.count, 2)
+
+        XCTAssertEqual(try pointsObserver.toBlocking().first()?[0].id, "Id: testID")
+        XCTAssertEqual(try pointsObserver.toBlocking().first()?[0].name, "testName")
+        XCTAssertEqual(try pointsObserver.toBlocking().first()?[0].lat, String(format: "latitude".localized, 1.4))
+        XCTAssertEqual(try pointsObserver.toBlocking().first()?[0].lon, String(format: "longitude".localized, 1.5))
+        XCTAssertEqual(try pointsObserver.toBlocking().first()?[0].companyZoneID, 3)
+
+        XCTAssertEqual(try pointsObserver.toBlocking().first()?[1].id, "Id: testID2")
+        XCTAssertEqual(try pointsObserver.toBlocking().first()?[1].name, "testName2")
+        XCTAssertEqual(try pointsObserver.toBlocking().first()?[1].lat, String(format: "latitude".localized, 1.6))
+        XCTAssertEqual(try pointsObserver.toBlocking().first()?[1].lon, String(format: "longitude".localized, 1.7))
+        XCTAssertEqual(try pointsObserver.toBlocking().first()?[1].companyZoneID, 4)
+        
+        XCTAssertEqual(try pointsObserver.toBlocking().first(), points)
+
+    }
+
 
 }
