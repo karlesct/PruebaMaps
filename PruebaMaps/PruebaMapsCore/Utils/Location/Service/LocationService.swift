@@ -18,7 +18,7 @@ public protocol LocationServiceDelegate: class {
 public protocol LocationServiceProtocol {
 
     var delegate: LocationServiceDelegate? { get set }
-
+    func checkLocationAuthorization()
 }
 
 public class LocationService: NSObject, LocationServiceProtocol {
@@ -48,7 +48,7 @@ public class LocationService: NSObject, LocationServiceProtocol {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
 
-    func checkLocationAuthorization() {
+    public func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
             startTrackingUserLocation()

@@ -53,15 +53,17 @@ internal final class FirstViewController: UIViewController {
 
         // ViewDidLoad
         self.rx.viewDidLoad
-            .subscribe(onNext: {
-                self.presenter.viewDidLoad()
+            .subscribe({ [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.presenter.viewDidLoad()
             })
             .disposed(by: disposeBag)
 
         // ViewDidAppear
         self.rx.viewDidAppear
-            .subscribe({ _ in
-                self.presenter.viewDidAppear()
+            .subscribe({ [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.presenter.viewDidAppear()
             })
             .disposed(by: disposeBag)
 
