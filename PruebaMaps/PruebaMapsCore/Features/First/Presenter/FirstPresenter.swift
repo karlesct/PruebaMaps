@@ -42,21 +42,21 @@ internal final class FirstPresenter: FirstPresenterProtocol {
 
     // Points
 
-    public var titlePageSubject: BehaviorSubject<String> = BehaviorSubject<String>(value: .empty) // if no test that can we private
+    internal var titlePageSubject: BehaviorSubject<String> = BehaviorSubject<String>(value: .empty)
     public var titlePageObservable: Observable<String> {
         return titlePageSubject.asObservable()
     }
 
     // Points
 
-    public var pointsSubject: BehaviorSubject<Points> = BehaviorSubject<Points>(value: [])   // if no test that can we private
+    internal var pointsSubject: BehaviorSubject<Points> = BehaviorSubject<Points>(value: [])
     public var pointsObservable: Observable<Points> {
         return pointsSubject.asObservable()
     }
 
     // Location
 
-    public var locationSubject: BehaviorSubject<CLLocation?> = BehaviorSubject<CLLocation?>(value: nil)   // if no test that can we private
+    internal var locationSubject: BehaviorSubject<CLLocation?> = BehaviorSubject<CLLocation?>(value: nil)
     public var locationObservable: Observable<CLLocation?> {
         return locationSubject.asObservable()
     }

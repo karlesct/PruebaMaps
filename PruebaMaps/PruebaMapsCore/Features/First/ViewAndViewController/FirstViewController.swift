@@ -65,7 +65,7 @@ internal final class FirstViewController: UIViewController {
             })
             .disposed(by: disposeBag)
 
-        // Points
+        // Title
         presenter.titlePageObservable
             .subscribe(onNext: { [weak self] titlePage in
                 guard let strongSelf = self else { return }
