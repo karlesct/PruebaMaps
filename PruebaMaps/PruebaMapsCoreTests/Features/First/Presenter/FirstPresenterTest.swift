@@ -43,12 +43,12 @@ class FirstPresenterTest: XCTestCase {
 
     // MARK: - Variables
 
-    private var disposeBag: DisposeBag!
-    private var repository: FirstRepositoryMock!
-    private var presenter: FirstPresenter!
-    private var locationService: LocationServiceMock!
-    private var testScheduler: TestScheduler!
-    private var scheduler: ConcurrentDispatchQueueScheduler!
+    var disposeBag: DisposeBag!
+    var repository: FirstRepositoryMock!
+    var presenter: FirstPresenter!
+    var locationService: LocationServiceMock!
+    var testScheduler: TestScheduler!
+    var scheduler: ConcurrentDispatchQueueScheduler!
     var pointRequest: PointRequest!
 
     // MARK: - Lifecycle Methods

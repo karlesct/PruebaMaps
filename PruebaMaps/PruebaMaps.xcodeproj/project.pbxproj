@@ -74,6 +74,7 @@
 		2740D91524F96E20001273A8 /* EndPointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91424F96E20001273A8 /* EndPointTest.swift */; };
 		2740D91824F97737001273A8 /* RemoteErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91724F97737001273A8 /* RemoteErrorTest.swift */; };
 		2740D91A24F97D41001273A8 /* RemoteHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91924F97D41001273A8 /* RemoteHandlerTest.swift */; };
+		275EF34825077453001A8CB5 /* PointElementTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF34725077453001A8CB5 /* PointElementTest.swift */; };
 		2788380424FA4BD000AD6E1A /* FirstRespositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */; };
 		27C3D65625062CAF00B0D307 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; };
 		27C3D65725062CAF00B0D307 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -233,7 +234,7 @@
 		2740D91424F96E20001273A8 /* EndPointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTest.swift; sourceTree = "<group>"; };
 		2740D91724F97737001273A8 /* RemoteErrorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteErrorTest.swift; sourceTree = "<group>"; };
 		2740D91924F97D41001273A8 /* RemoteHandlerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHandlerTest.swift; sourceTree = "<group>"; };
-		2788380124FA483D00AD6E1A /* PointElementTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointElementTest.swift; sourceTree = "<group>"; };
+		275EF34725077453001A8CB5 /* PointElementTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointElementTest.swift; sourceTree = "<group>"; };
 		2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRespositoryTest.swift; sourceTree = "<group>"; };
 		27C3D65525062CAF00B0D307 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		27C3D65F2506351E00B0D307 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -805,7 +806,7 @@
 		2788380024FA482800AD6E1A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2788380124FA483D00AD6E1A /* PointElementTest.swift */,
+				275EF34725077453001A8CB5 /* PointElementTest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1126,6 +1127,7 @@
 				27C3D67125067AD700B0D307 /* ViewController+ReactiveTest.swift in Sources */,
 				2740D88A24F79AB8001273A8 /* Bundle+IdentifiersTest.swift in Sources */,
 				2740D86724F79835001273A8 /* PruebaMapsCoreTests.swift in Sources */,
+				275EF34825077453001A8CB5 /* PointElementTest.swift in Sources */,
 				2740D90B24F92CCC001273A8 /* UIColor+RandomTest.swift in Sources */,
 				2740D88F24F79C02001273A8 /* String+LocalizedTest.swift in Sources */,
 				27C3D67825067F7100B0D307 /* FirstPresenterTest.swift in Sources */,

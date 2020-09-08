@@ -11,31 +11,45 @@ import XCTest
 
 class PointElementTest: XCTestCase {
 
-    func testPointElement_01() {
+    // MARK: - Variables
 
-        let pointsElementResponse = [PointElementResponse(id: "testID",
-                                                         name: "testName",
-                                                         pointX: 10.1,
-                                                         pointY: 10.2,
-                                                         scheduledArrival: 1,
-                                                         locationType: 2,
-                                                         companyZoneID: 3,
-                                                         lat: 1.4,
-                                                         lon: 1.5,
-                                                         licencePlate: "testPlate",
-                                                         range: 10,
-                                                         batteryLevel: 11,
-                                                         seats: 12,
-                                                         model: "testModel",
-                                                         resourceImageID: "testResourceImageID",
-                                                         realTimeData: true,
-                                                         resourceType: "testResourceType",
-                                                         helmets: 13,
-                                                         station: false,
-                                                         availableResources: 14,
-                                                         spacesAvailable: 15,
-                                                         allowDropoff: true,
-                                                         bikesAvailable: 16)]
+    var pointsElementResponse: [PointElementResponse]!
+
+    override func setUp() {
+        super.setUp()
+
+        pointsElementResponse = [PointElementResponse(id: "testID",
+                                                      name: "testName",
+                                                      pointX: 10.1,
+                                                      pointY: 10.2,
+                                                      scheduledArrival: 1,
+                                                      locationType: 2,
+                                                      companyZoneID: 3,
+                                                      lat: 1.4,
+                                                      lon: 1.5,
+                                                      licencePlate: "testPlate",
+                                                      range: 10,
+                                                      batteryLevel: 11,
+                                                      seats: 12,
+                                                      model: "testModel",
+                                                      resourceImageID: "testResourceImageID",
+                                                      realTimeData: true,
+                                                      resourceType: "testResourceType",
+                                                      helmets: 13,
+                                                      station: false,
+                                                      availableResources: 14,
+                                                      spacesAvailable: 15,
+                                                      allowDropoff: true,
+                                                      bikesAvailable: 16)]
+    }
+
+    override func tearDown() {
+        pointsElementResponse = nil
+
+        super.tearDown()
+    }
+
+    func testPointElement_01() {
 
         let points = PointElementBinding.bind(pointsElementResponse)
 
@@ -47,6 +61,14 @@ class PointElementTest: XCTestCase {
         XCTAssertEqual(point.lat, String(format: "latitude".localized, 10.2))
         XCTAssertEqual(point.lon, String(format: "longitude".localized, 10.1))
         XCTAssertEqual(point.companyZoneID, 3)
+    }
+
+    func testPointElement_02() {
+
+        let uniqueCompanyZoneIDWithColor: [UniqueCompanyZoneIDWithColor] = PointElementBinding.converter(pointElementResponse: pointsElementResponse)
+
+        XCTAssertEqual(uniqueCompanyZoneIDWithColor.count, 1)
+        XCTAssertEqual(uniqueCompanyZoneIDWithColor[0].companyZoneID, 3)
     }
 
 }

@@ -75,17 +75,7 @@ internal final class PointElementBinding {
 
         var points: [PointElement] = []
 
-        let uniqueCategories = pointElementResponse
-            .compactMap { $0.companyZoneID }
-            .distinct()
-
-        var uniqueCompanyZoneIDWithColor: [UniqueCompanyZoneIDWithColor] = []
-
-        uniqueCategories.forEach { item in
-
-            let element = UniqueCompanyZoneIDWithColor(companyZoneID: item, color: UIColor.random)
-            uniqueCompanyZoneIDWithColor.append(element)
-        }
+        let uniqueCompanyZoneIDWithColor = converter(pointElementResponse: pointElementResponse)
 
         pointElementResponse.forEach { item in
             let position = CLLocationCoordinate2D(latitude: CLLocationDegrees(item.pointY),
@@ -114,6 +104,23 @@ internal final class PointElementBinding {
         }
         return points
 
+    }
+
+    static func converter(pointElementResponse: PointsElementResponse) -> [UniqueCompanyZoneIDWithColor] {
+
+        let uniqueCategories = pointElementResponse
+            .compactMap { $0.companyZoneID }
+            .distinct()
+
+        var uniqueCompanyZoneIDWithColor: [UniqueCompanyZoneIDWithColor] = []
+
+        uniqueCategories.forEach { item in
+
+            let element = UniqueCompanyZoneIDWithColor(companyZoneID: item, color: UIColor.random)
+            uniqueCompanyZoneIDWithColor.append(element)
+        }
+
+        return uniqueCompanyZoneIDWithColor
     }
 
 }
