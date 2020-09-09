@@ -15,11 +15,11 @@ public extension UIAlertController {
         // MARK: - Properties
 
         private var preferredStyle: UIAlertController.Style = .alert
-        private var title: String? = nil
-        private var message: String? = nil
+        private var title: String?
+        private var message: String?
         private var alertActions: [UIAlertAction] = [UIAlertAction]()
-        private var sourceView: UIView? = nil
-        private var sourceRect: CGRect? = nil
+        private var sourceView: UIView?
+        private var sourceRect: CGRect?
 
         // MARK: - Init
 
@@ -29,37 +29,37 @@ public extension UIAlertController {
 
         // MARK: - Methods
 
-        func withPreferredStyle(_ preferredStyle: UIAlertController.Style)  -> Builder {
+        func withPreferredStyle(_ preferredStyle: UIAlertController.Style) -> Builder {
 
             self.preferredStyle = preferredStyle
             return self
         }
 
-        func withTitle(_ title: String?)  -> Builder {
+        func withTitle(_ title: String?) -> Builder {
 
             self.title = title
             return self
         }
 
-        func withMessage(_ message: String?)  -> Builder {
+        func withMessage(_ message: String?) -> Builder {
 
             self.message = message
             return self
         }
 
-        func withAlertActions(_ alertActions: [UIAlertAction])  -> Builder {
+        func withAlertActions(_ alertActions: [UIAlertAction]) -> Builder {
 
             self.alertActions = alertActions
             return self
         }
 
-        func withSourceView(_ sourceView: UIView?)  -> Builder {
+        func withSourceView(_ sourceView: UIView?) -> Builder {
 
             self.sourceView = sourceView
             return self
         }
 
-        func withSourceRect(_ sourceRect: CGRect?)  -> Builder {
+        func withSourceRect(_ sourceRect: CGRect?) -> Builder {
 
             self.sourceRect = sourceRect
             return self
@@ -105,8 +105,6 @@ public extension UIAlertController {
 
         }
 
-
     }
-
 
 }

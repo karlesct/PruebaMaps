@@ -12,6 +12,8 @@ import RxCocoa
 
 public extension Reactive where Base: UIViewController {
 
+    // MARK: - Life cycle
+
     var viewDidLoad: ControlEvent<Void> {
       let source = self.methodInvoked(#selector(Base.viewDidLoad)).map { _ in }
       return ControlEvent(events: source)

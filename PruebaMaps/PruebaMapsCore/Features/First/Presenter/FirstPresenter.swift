@@ -83,11 +83,13 @@ internal final class FirstPresenter: FirstPresenterProtocol {
     func viewDidLoad() {
 
         self.titlePageSubject.onNext("Maps")
+
     }
 
     func viewDidAppear() {
 
         locationService.delegate = self
+        setupBindings()
 
     }
 
@@ -113,6 +115,24 @@ internal final class FirstPresenter: FirstPresenterProtocol {
         })
 
     }
+}
+
+extension FirstPresenter {
+
+    private func setupBindings() {
+
+        guard let disposeBag = disposeBag else { return }
+
+        UIApplication.shared.rx.applicationDidBecomeActive
+        .subscribe({ [weak self] _ in
+            guard let strongSelf = self else { return }
+            strongSelf.locationService.checkLocationAuthorization()
+
+        })
+        .disposed(by: disposeBag)
+
+    }
+
 }
 
 extension FirstPresenter: LocationServiceDelegate {
