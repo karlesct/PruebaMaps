@@ -1,5 +1,5 @@
 //
-//  Application+Reactive.swift
+//  ApplicationLifeCycle+Reactive.swift
 //  PruebaMapsCore
 //
 //  Created by Carles Cañadas Torrents on 08/09/2020.

@@ -1,5 +1,5 @@
 //
-//  ViewController+Reactive.swift
+//  ViewControllerLifeCycle+Reactive.swift
 //  PruebaMapsCore
 //
 //  Created by Carles Cañadas Torrents on 07/09/2020.
