@@ -75,7 +75,7 @@
 		2740D91A24F97D41001273A8 /* RemoteHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740D91924F97D41001273A8 /* RemoteHandlerTest.swift */; };
 		275EF34825077453001A8CB5 /* PointElementTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF34725077453001A8CB5 /* PointElementTest.swift */; };
 		275EF35325079185001A8CB5 /* UIAlertController+Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF35225079185001A8CB5 /* UIAlertController+Builder.swift */; };
-		275EF3562507D911001A8CB5 /* ApplicationLifeCycle+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF3552507D911001A8CB5 /* ApplicationLifeCycle+Reactive.swift */; };
+		275EF3562507D911001A8CB5 /* Application+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF3552507D911001A8CB5 /* Application+Reactive.swift */; };
 		2788380424FA4BD000AD6E1A /* FirstRespositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */; };
 		27C3D65625062CAF00B0D307 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; };
 		27C3D65725062CAF00B0D307 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -83,7 +83,7 @@
 		27C3D6612506351E00B0D307 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65F2506351E00B0D307 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		27C3D666250637B100B0D307 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D665250637B100B0D307 /* RxRelay.framework */; };
 		27C3D667250637B100B0D307 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D665250637B100B0D307 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		27C3D66F2506679300B0D307 /* ViewControllerLifeCycle+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3D66E2506679300B0D307 /* ViewControllerLifeCycle+Reactive.swift */; };
+		27C3D66F2506679300B0D307 /* ViewController+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3D66E2506679300B0D307 /* ViewController+Reactive.swift */; };
 		27C3D67125067AD700B0D307 /* ViewController+ReactiveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3D67025067AD700B0D307 /* ViewController+ReactiveTest.swift */; };
 		27C3D67825067F7100B0D307 /* FirstPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3D67725067F7100B0D307 /* FirstPresenterTest.swift */; };
 		27C3D67B25068D7300B0D307 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D67A25068D7300B0D307 /* RxTest.framework */; };
@@ -236,12 +236,12 @@
 		2740D91924F97D41001273A8 /* RemoteHandlerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHandlerTest.swift; sourceTree = "<group>"; };
 		275EF34725077453001A8CB5 /* PointElementTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointElementTest.swift; sourceTree = "<group>"; };
 		275EF35225079185001A8CB5 /* UIAlertController+Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Builder.swift"; sourceTree = "<group>"; };
-		275EF3552507D911001A8CB5 /* ApplicationLifeCycle+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicationLifeCycle+Reactive.swift"; sourceTree = "<group>"; };
+		275EF3552507D911001A8CB5 /* Application+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Reactive.swift"; sourceTree = "<group>"; };
 		2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRespositoryTest.swift; sourceTree = "<group>"; };
 		27C3D65525062CAF00B0D307 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		27C3D65F2506351E00B0D307 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		27C3D665250637B100B0D307 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
-		27C3D66E2506679300B0D307 /* ViewControllerLifeCycle+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerLifeCycle+Reactive.swift"; sourceTree = "<group>"; };
+		27C3D66E2506679300B0D307 /* ViewController+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Reactive.swift"; sourceTree = "<group>"; };
 		27C3D67025067AD700B0D307 /* ViewController+ReactiveTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ViewController+ReactiveTest.swift"; path = "PruebaMapsCore/Utils/Extensions/ViewController/ViewController+ReactiveTest.swift"; sourceTree = SOURCE_ROOT; };
 		27C3D67725067F7100B0D307 /* FirstPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPresenterTest.swift; sourceTree = "<group>"; };
 		27C3D67A25068D7300B0D307 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
@@ -793,7 +793,7 @@
 		275EF3542507D8F9001A8CB5 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				275EF3552507D911001A8CB5 /* ApplicationLifeCycle+Reactive.swift */,
+				275EF3552507D911001A8CB5 /* Application+Reactive.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -826,7 +826,7 @@
 			isa = PBXGroup;
 			children = (
 				2740D8F324F800CB001273A8 /* ViewController+GetTopViewController.swift */,
-				27C3D66E2506679300B0D307 /* ViewControllerLifeCycle+Reactive.swift */,
+				27C3D66E2506679300B0D307 /* ViewController+Reactive.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1117,10 +1117,10 @@
 				2740D8AC24F7AF1E001273A8 /* EndPoint.swift in Sources */,
 				2740D89424F7A078001273A8 /* FirstAssembly.swift in Sources */,
 				2740D90624F92C1D001273A8 /* UIColor+Random.swift in Sources */,
-				27C3D66F2506679300B0D307 /* ViewControllerLifeCycle+Reactive.swift in Sources */,
+				27C3D66F2506679300B0D307 /* ViewController+Reactive.swift in Sources */,
 				2740D90024F80AFF001273A8 /* LocationServiceAssembly.swift in Sources */,
 				275EF35325079185001A8CB5 /* UIAlertController+Builder.swift in Sources */,
-				275EF3562507D911001A8CB5 /* ApplicationLifeCycle+Reactive.swift in Sources */,
+				275EF3562507D911001A8CB5 /* Application+Reactive.swift in Sources */,
 				2740D89C24F7A2C0001273A8 /* FirstViewController.swift in Sources */,
 				2740D89A24F7A1F5001273A8 /* FirstPresenter.swift in Sources */,
 				2740D8AE24F7B03B001273A8 /* RemoteHandler.swift in Sources */,
