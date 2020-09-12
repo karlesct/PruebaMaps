@@ -24,14 +24,11 @@ internal protocol FirstPresenterProtocol: class {
     var locationObservable: Observable<CLLocation?> { get }
     var locationSubject: BehaviorSubject<CLLocation?> { get set }
 
-    func viewDidLoad()
-    func viewDidAppear()
-
     func fetchPoints(zone: String, loweLeft: CLLocationCoordinate2D, upperRight: CLLocationCoordinate2D)
 
 }
 
-internal final class FirstPresenter: FirstPresenterProtocol {
+internal final class FirstPresenter: BasePresenter, FirstPresenterProtocol {
 
     // MARK: - Properties
 
@@ -80,13 +77,15 @@ internal final class FirstPresenter: FirstPresenterProtocol {
 
     }
 
-    func viewDidLoad() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
         self.titlePageSubject.onNext("Maps")
 
     }
 
-    func viewDidAppear() {
+    override func viewDidAppear() {
+        super.viewDidAppear()
 
         locationService.delegate = self
         setupBindings()

@@ -76,6 +76,8 @@
 		275EF34825077453001A8CB5 /* PointElementTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF34725077453001A8CB5 /* PointElementTest.swift */; };
 		275EF35325079185001A8CB5 /* UIAlertController+Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF35225079185001A8CB5 /* UIAlertController+Builder.swift */; };
 		275EF3562507D911001A8CB5 /* Application+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF3552507D911001A8CB5 /* Application+Reactive.swift */; };
+		275EF35D250B631E001A8CB5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF35C250B631D001A8CB5 /* BaseViewController.swift */; };
+		275EF35F250B6350001A8CB5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF35E250B6350001A8CB5 /* BasePresenter.swift */; };
 		2788380424FA4BD000AD6E1A /* FirstRespositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */; };
 		27C3D65625062CAF00B0D307 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; };
 		27C3D65725062CAF00B0D307 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -237,6 +239,8 @@
 		275EF34725077453001A8CB5 /* PointElementTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointElementTest.swift; sourceTree = "<group>"; };
 		275EF35225079185001A8CB5 /* UIAlertController+Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Builder.swift"; sourceTree = "<group>"; };
 		275EF3552507D911001A8CB5 /* Application+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Reactive.swift"; sourceTree = "<group>"; };
+		275EF35C250B631D001A8CB5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		275EF35E250B6350001A8CB5 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRespositoryTest.swift; sourceTree = "<group>"; };
 		27C3D65525062CAF00B0D307 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		27C3D65F2506351E00B0D307 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -534,6 +538,7 @@
 		2740D89024F79F0F001273A8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				275EF359250B62DB001A8CB5 /* Base */,
 				2740D89224F79F37001273A8 /* First */,
 			);
 			path = Features;
@@ -796,6 +801,31 @@
 				275EF3552507D911001A8CB5 /* Application+Reactive.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		275EF359250B62DB001A8CB5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				275EF35B250B6308001A8CB5 /* Presenter */,
+				275EF35A250B62E4001A8CB5 /* ViewAndViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		275EF35A250B62E4001A8CB5 /* ViewAndViewController */ = {
+			isa = PBXGroup;
+			children = (
+				275EF35C250B631D001A8CB5 /* BaseViewController.swift */,
+			);
+			path = ViewAndViewController;
+			sourceTree = "<group>";
+		};
+		275EF35B250B6308001A8CB5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				275EF35E250B6350001A8CB5 /* BasePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		278837FC24FA44F000AD6E1A /* Features */ = {
@@ -1125,6 +1155,8 @@
 				2740D89A24F7A1F5001273A8 /* FirstPresenter.swift in Sources */,
 				2740D8AE24F7B03B001273A8 /* RemoteHandler.swift in Sources */,
 				2740D8A024F7A464001273A8 /* CoreAssembly.swift in Sources */,
+				275EF35D250B631E001A8CB5 /* BaseViewController.swift in Sources */,
+				275EF35F250B6350001A8CB5 /* BasePresenter.swift in Sources */,
 				2740D8A624F7AD96001273A8 /* RemoteAssembly.swift in Sources */,
 				2740D8B424F7B39E001273A8 /* PointRequest.swift in Sources */,
 				2740D88024F799C2001273A8 /* String+Empty.swift in Sources */,

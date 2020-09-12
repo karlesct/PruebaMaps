@@ -35,6 +35,10 @@ class FirstRepositoryMock: FirstRepositoryProtocol {
 }
 
 class LocationServiceMock: LocationServiceProtocol {
+    func checkLocationAuthorization() {
+        
+    }
+
     var delegate: LocationServiceDelegate?
 
 }

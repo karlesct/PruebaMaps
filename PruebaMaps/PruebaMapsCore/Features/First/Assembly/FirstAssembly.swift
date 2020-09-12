@@ -28,13 +28,13 @@ public final class FirstAssembly {
 
     public func viewController() -> UIViewController {
 
-        return FirstViewController(presenter: presenter())
+        return FirstViewController(with: presenter())
 
     }
 
     // MARK: - Internal Methods
 
-    func presenter() -> FirstPresenterProtocol {
+    func presenter() -> FirstPresenter {
 
         return FirstPresenter(repository: repository(),
                               locationService: buildLocationService() )

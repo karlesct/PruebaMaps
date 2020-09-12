@@ -10,7 +10,7 @@ import UIKit
 import GoogleMaps
 import RxSwift
 
-internal final class FirstViewController: UIViewController {
+internal final class FirstViewController: BaseViewController<FirstPresenter> {
 
     // MARK: - IBoutlets
 
@@ -18,54 +18,12 @@ internal final class FirstViewController: UIViewController {
 
     // MARK: - Properties
 
-    private let presenter: FirstPresenterProtocol
-    private var disposeBag: DisposeBag?
-
-    // MARK: - Init
-
-    init(presenter: FirstPresenterProtocol) {
-        self.presenter = presenter
-
-        self.disposeBag = DisposeBag()
-
-        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
-
-        self.setupBindings()
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    // MARK: - Life cycle
-
-    override public func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-
-        self.disposeBag = nil
-    }
-
     // MARK: - Private methods
 
-    private func setupBindings() {
+    override func setupBindings() {
+        super.setupBindings()
 
-        guard let disposeBag = disposeBag else { return }
-
-        // ViewDidLoad
-        self.rx.viewDidLoad
-            .subscribe({ [weak self] _ in
-                guard let strongSelf = self else { return }
-                strongSelf.presenter.viewDidLoad()
-            })
-            .disposed(by: disposeBag)
-
-        // ViewDidAppear
-        self.rx.viewDidAppear
-            .subscribe({ [weak self] _ in
-                guard let strongSelf = self else { return }
-                strongSelf.presenter.viewDidAppear()
-            })
-            .disposed(by: disposeBag)
+        guard let disposeBag = self.disposeBag else { return }
 
         // Title
         presenter.titlePageObservable
