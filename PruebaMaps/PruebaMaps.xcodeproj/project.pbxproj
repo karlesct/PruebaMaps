@@ -78,6 +78,8 @@
 		275EF3562507D911001A8CB5 /* Application+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF3552507D911001A8CB5 /* Application+Reactive.swift */; };
 		275EF35D250B631E001A8CB5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF35C250B631D001A8CB5 /* BaseViewController.swift */; };
 		275EF35F250B6350001A8CB5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF35E250B6350001A8CB5 /* BasePresenter.swift */; };
+		275EF363250CD96B001A8CB5 /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF362250CD96B001A8CB5 /* ApplicationService.swift */; };
+		275EF366250E09D8001A8CB5 /* ApplicationVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF365250E09D8001A8CB5 /* ApplicationVersion.swift */; };
 		2788380424FA4BD000AD6E1A /* FirstRespositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */; };
 		27C3D65625062CAF00B0D307 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; };
 		27C3D65725062CAF00B0D307 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -241,6 +243,8 @@
 		275EF3552507D911001A8CB5 /* Application+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Reactive.swift"; sourceTree = "<group>"; };
 		275EF35C250B631D001A8CB5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		275EF35E250B6350001A8CB5 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		275EF362250CD96B001A8CB5 /* ApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
+		275EF365250E09D8001A8CB5 /* ApplicationVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationVersion.swift; sourceTree = "<group>"; };
 		2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRespositoryTest.swift; sourceTree = "<group>"; };
 		27C3D65525062CAF00B0D307 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		27C3D65F2506351E00B0D307 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -459,6 +463,7 @@
 		2740D87C24F7999F001273A8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				275EF360250CD937001A8CB5 /* Application */,
 				2740D8F024F8004E001273A8 /* Location */,
 				2740D8AF24F7B140001273A8 /* HTTP */,
 				2740D87D24F799A8001273A8 /* Extensions */,
@@ -828,6 +833,31 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		275EF360250CD937001A8CB5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				275EF364250E09C7001A8CB5 /* Model */,
+				275EF361250CD945001A8CB5 /* Service */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		275EF361250CD945001A8CB5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				275EF362250CD96B001A8CB5 /* ApplicationService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		275EF364250E09C7001A8CB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				275EF365250E09D8001A8CB5 /* ApplicationVersion.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		278837FC24FA44F000AD6E1A /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -1141,6 +1171,7 @@
 				2740D8B124F7B163001273A8 /* HTTPConstants.swift in Sources */,
 				2740D8A224F7AB94001273A8 /* PointElement.swift in Sources */,
 				2740D8A924F7AE36001273A8 /* RemoteError.swift in Sources */,
+				275EF363250CD96B001A8CB5 /* ApplicationService.swift in Sources */,
 				2740D8FE24F80607001273A8 /* LocationService.swift in Sources */,
 				2740D90E24F92DEA001273A8 /* Array+Distinct.swift in Sources */,
 				2740D88524F79A35001273A8 /* Bundle+Identifiers.swift in Sources */,
@@ -1159,6 +1190,7 @@
 				275EF35F250B6350001A8CB5 /* BasePresenter.swift in Sources */,
 				2740D8A624F7AD96001273A8 /* RemoteAssembly.swift in Sources */,
 				2740D8B424F7B39E001273A8 /* PointRequest.swift in Sources */,
+				275EF366250E09D8001A8CB5 /* ApplicationVersion.swift in Sources */,
 				2740D88024F799C2001273A8 /* String+Empty.swift in Sources */,
 				2740D8B724F7B66D001273A8 /* FirstRepository.swift in Sources */,
 			);
