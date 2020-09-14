@@ -20,6 +20,8 @@ public final class CoreAssembly {
     public private(set) lazy var firstAssembly = FirstAssembly(navigationController: navigationController,
                                                                remoteAssembly: remoteAssembly)
 
+    public private(set) lazy var walkthroughAssembly = WalkthroughAssembly()
+
     // MARK: - Init
     public init(navigationController: UINavigationController) {
 

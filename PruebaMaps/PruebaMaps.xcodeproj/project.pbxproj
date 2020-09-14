@@ -80,6 +80,15 @@
 		275EF35F250B6350001A8CB5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF35E250B6350001A8CB5 /* BasePresenter.swift */; };
 		275EF363250CD96B001A8CB5 /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF362250CD96B001A8CB5 /* ApplicationService.swift */; };
 		275EF366250E09D8001A8CB5 /* ApplicationVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275EF365250E09D8001A8CB5 /* ApplicationVersion.swift */; };
+		27841887250FBF5500DA9DAF /* WalkthroughAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27841886250FBF5500DA9DAF /* WalkthroughAssembly.swift */; };
+		278685E4250F633200593E40 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; };
+		278685E5250F633200593E40 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		278685E9250F70C300593E40 /* WalkthroughElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278685E8250F70C300593E40 /* WalkthroughElement.swift */; };
+		278685EB250F711300593E40 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278685EA250F711300593E40 /* WalkthroughViewController.swift */; };
+		278685F2250F741600593E40 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278685F1250F741600593E40 /* WalkthroughPageViewController.swift */; };
+		278685F4250F74E700593E40 /* WalkthroughPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278685F3250F74E700593E40 /* WalkthroughPageViewController.xib */; };
+		278685F7250F79CC00593E40 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278685F6250F79CC00593E40 /* NibLoadable.swift */; };
+		278685F9250F85DE00593E40 /* WalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278685F8250F85DE00593E40 /* WalkthroughViewController.xib */; };
 		2788380424FA4BD000AD6E1A /* FirstRespositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */; };
 		27C3D65625062CAF00B0D307 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; };
 		27C3D65725062CAF00B0D307 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27C3D65525062CAF00B0D307 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -141,6 +150,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				278685E5250F633200593E40 /* RxSwift.framework in Embed Frameworks */,
 				2740D86D24F79836001273A8 /* PruebaMapsCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -245,6 +255,13 @@
 		275EF35E250B6350001A8CB5 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		275EF362250CD96B001A8CB5 /* ApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
 		275EF365250E09D8001A8CB5 /* ApplicationVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationVersion.swift; sourceTree = "<group>"; };
+		27841886250FBF5500DA9DAF /* WalkthroughAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughAssembly.swift; sourceTree = "<group>"; };
+		278685E8250F70C300593E40 /* WalkthroughElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughElement.swift; sourceTree = "<group>"; };
+		278685EA250F711300593E40 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		278685F1250F741600593E40 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		278685F3250F74E700593E40 /* WalkthroughPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkthroughPageViewController.xib; sourceTree = "<group>"; };
+		278685F6250F79CC00593E40 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		278685F8250F85DE00593E40 /* WalkthroughViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkthroughViewController.xib; sourceTree = "<group>"; };
 		2788380324FA4BD000AD6E1A /* FirstRespositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRespositoryTest.swift; sourceTree = "<group>"; };
 		27C3D65525062CAF00B0D307 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		27C3D65F2506351E00B0D307 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = PruebaMapsCore/Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -261,6 +278,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				278685E4250F633200593E40 /* RxSwift.framework in Frameworks */,
 				2740D86C24F79836001273A8 /* PruebaMapsCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +485,8 @@
 				2740D8F024F8004E001273A8 /* Location */,
 				2740D8AF24F7B140001273A8 /* HTTP */,
 				2740D87D24F799A8001273A8 /* Extensions */,
+				278685F5250F79B600593E40 /* Nib */,
+				278685E6250F6FBE00593E40 /* Walkthrough */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -858,6 +878,59 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		27841885250FBF3B00DA9DAF /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				27841886250FBF5500DA9DAF /* WalkthroughAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		278685E6250F6FBE00593E40 /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				27841885250FBF3B00DA9DAF /* Assembly */,
+				278685E7250F709F00593E40 /* Model */,
+				278685EC250F711800593E40 /* ViewAndViewController */,
+			);
+			path = Walkthrough;
+			sourceTree = "<group>";
+		};
+		278685E7250F709F00593E40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				278685E8250F70C300593E40 /* WalkthroughElement.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		278685EC250F711800593E40 /* ViewAndViewController */ = {
+			isa = PBXGroup;
+			children = (
+				278685F0250F734600593E40 /* Page */,
+				278685EA250F711300593E40 /* WalkthroughViewController.swift */,
+				278685F8250F85DE00593E40 /* WalkthroughViewController.xib */,
+			);
+			path = ViewAndViewController;
+			sourceTree = "<group>";
+		};
+		278685F0250F734600593E40 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				278685F1250F741600593E40 /* WalkthroughPageViewController.swift */,
+				278685F3250F74E700593E40 /* WalkthroughPageViewController.xib */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		278685F5250F79B600593E40 /* Nib */ = {
+			isa = PBXGroup;
+			children = (
+				278685F6250F79CC00593E40 /* NibLoadable.swift */,
+			);
+			path = Nib;
+			sourceTree = "<group>";
+		};
 		278837FC24FA44F000AD6E1A /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -1100,7 +1173,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2740D87924F7992B001273A8 /* Localizable.strings in Resources */,
+				278685F9250F85DE00593E40 /* WalkthroughViewController.xib in Resources */,
 				2740D89E24F7A314001273A8 /* FirstViewController.xib in Resources */,
+				278685F4250F74E700593E40 /* WalkthroughPageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1172,9 +1247,12 @@
 				2740D8A224F7AB94001273A8 /* PointElement.swift in Sources */,
 				2740D8A924F7AE36001273A8 /* RemoteError.swift in Sources */,
 				275EF363250CD96B001A8CB5 /* ApplicationService.swift in Sources */,
+				278685E9250F70C300593E40 /* WalkthroughElement.swift in Sources */,
 				2740D8FE24F80607001273A8 /* LocationService.swift in Sources */,
+				278685EB250F711300593E40 /* WalkthroughViewController.swift in Sources */,
 				2740D90E24F92DEA001273A8 /* Array+Distinct.swift in Sources */,
 				2740D88524F79A35001273A8 /* Bundle+Identifiers.swift in Sources */,
+				278685F2250F741600593E40 /* WalkthroughPageViewController.swift in Sources */,
 				2740D8AC24F7AF1E001273A8 /* EndPoint.swift in Sources */,
 				2740D89424F7A078001273A8 /* FirstAssembly.swift in Sources */,
 				2740D90624F92C1D001273A8 /* UIColor+Random.swift in Sources */,
@@ -1187,7 +1265,9 @@
 				2740D8AE24F7B03B001273A8 /* RemoteHandler.swift in Sources */,
 				2740D8A024F7A464001273A8 /* CoreAssembly.swift in Sources */,
 				275EF35D250B631E001A8CB5 /* BaseViewController.swift in Sources */,
+				278685F7250F79CC00593E40 /* NibLoadable.swift in Sources */,
 				275EF35F250B6350001A8CB5 /* BasePresenter.swift in Sources */,
+				27841887250FBF5500DA9DAF /* WalkthroughAssembly.swift in Sources */,
 				2740D8A624F7AD96001273A8 /* RemoteAssembly.swift in Sources */,
 				2740D8B424F7B39E001273A8 /* PointRequest.swift in Sources */,
 				275EF366250E09D8001A8CB5 /* ApplicationVersion.swift in Sources */,
@@ -1387,11 +1467,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/PruebaMapsCore/Carthage/Build/iOS";
 				INFOPLIST_FILE = PruebaMaps/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = es.carlescanadastorrents.PruebaMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1405,11 +1487,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/PruebaMapsCore/Carthage/Build/iOS";
 				INFOPLIST_FILE = PruebaMaps/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = es.carlescanadastorrents.PruebaMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
