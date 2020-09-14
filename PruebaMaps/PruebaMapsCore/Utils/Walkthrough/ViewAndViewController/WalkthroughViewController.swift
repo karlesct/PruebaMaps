@@ -90,14 +90,8 @@ extension WalkthroughViewController: UIPageViewControllerDataSource, UIPageViewC
     }
 
     public func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        if !completed { return }
 
-//        if let lastPushedVC = pageViewController.viewControllers?.last {
-//            if let index = index(of: lastPushedVC) {
-//
-//            } else {
-//            }
-//        }
+         if !completed { return }
 
         if let currentViewController = pageViewController.viewControllers?.first,
         let index = viewControllers.firstIndex(of: currentViewController) {
@@ -115,10 +109,6 @@ extension WalkthroughViewController: UIPageViewControllerDataSource, UIPageViewC
     public func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return self.viewControllers.count
     }
-
-//    public func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-//        return self.currentIndex
-//    }
 
     private func index(of viewController: UIViewController) -> Int? {
         let index = viewControllers.firstIndex(of: viewController)
