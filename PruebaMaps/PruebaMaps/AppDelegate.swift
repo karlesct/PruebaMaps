@@ -63,18 +63,24 @@ extension AppDelegate {
         .subscribe(onNext: { [weak self] isFirstLaunch in
             guard let strongSelf = self else { return }
             debugPrint("isFirstLaunch: \(isFirstLaunch)")
-            let firstViewController = isFirstLaunch
-                ? strongSelf.appAssembly.coreAssembly.walkthroughAssembly.viewController()
-                : strongSelf.appAssembly.coreAssembly.walkthroughAssembly.viewController()
-                //: strongSelf.appAssembly.coreAssembly.firstAssembly.viewController()
-
-            strongSelf.presentViewController(firstViewController)
+            isFirstLaunch
+                ? strongSelf.startdWalkthrough()
+                //: strongSelf.startFirstView()
+                : strongSelf.startdWalkthrough()
 
         }).disposed(by: disposeBag)
 
     }
 
-    func presentViewController(_ firstViewController: UIViewController) {
+    func startdWalkthrough() {
+        appAssembly.window.rootViewController = self.appAssembly.coreAssembly.walkthroughAssembly.viewController()
+
+        appAssembly.window.makeKeyAndVisible()
+    }
+
+    func startFirstView() {
+
+        let firstViewController = self.appAssembly.coreAssembly.firstAssembly.viewController()
 
         appAssembly.navigationController.pushViewController(firstViewController,
                                                             animated: false)
@@ -82,7 +88,6 @@ extension AppDelegate {
         appAssembly.window.rootViewController = appAssembly.navigationController
 
         appAssembly.window.makeKeyAndVisible()
-
     }
 
 }
